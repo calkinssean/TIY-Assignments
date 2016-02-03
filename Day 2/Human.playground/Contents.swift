@@ -85,6 +85,12 @@ class Hand : BodyPart {
         self.injectWithSteroids()
         self.removeBodyPart()
     }
+    func openHand() {
+    }
+    func closeHand() {
+    }
+    func breakFingers() {
+    }
 }
 class Arm : BodyPart {
     override init() {
@@ -93,6 +99,13 @@ class Arm : BodyPart {
         self.isBroken = false
         self.canDrinkBeer = false
     }
+    func flexBicep() {
+    }
+    func doPushups() {
+    }
+    func punchWall() {
+        print("Hand is broken, idiot")
+    }
 }
 class Head : BodyPart {
     override init() {
@@ -100,6 +113,12 @@ class Head : BodyPart {
         self.canDrinkBeer = true
         self.tattoo = "cold blooded"
         self.isBroken = false
+    }
+    func headBang() {
+    }
+    func headButtWall() {
+    }
+    func shakeHead() {
     }
 }
 class Finger : BodyPart {
@@ -110,6 +129,15 @@ class Finger : BodyPart {
         self.length = 4
         self.tattoo = "Iron Yard"
     }
+    func flipOffZooAnimals() {
+        print("zoo animals are very insulted")
+    }
+    func pickNose() {
+    }
+    func wearRing() {
+    }
+    func trimNails() {
+    }
 }
 class Lungs : BodyPart {
     override init() {
@@ -117,6 +145,12 @@ class Lungs : BodyPart {
         self.canDrinkBeer = false
         self.isPowerful = false
         self.numberOfJoints = 0
+    }
+    func smoke() {
+    }
+    func breath() {
+    }
+    func suffocate() {
     }
 }
 class Leg : BodyPart {
@@ -127,6 +161,12 @@ class Leg : BodyPart {
         self.isPowerful = false
         self.isBroken = false
     }
+    func jump() {
+    }
+    func kick() {
+    }
+    func walk() {
+    }
 }
 class Feet : BodyPart {
     override init() {
@@ -134,6 +174,12 @@ class Feet : BodyPart {
         self.canDrinkBeer = false
         self.numberOfJoints = 15
         self.isAttached = true
+    }
+    func skip() {
+    }
+    func wearShoes() {
+    }
+    func kickWall() {
     }
 }
 class Toes : BodyPart {
@@ -143,6 +189,12 @@ class Toes : BodyPart {
         self.isPowerful = true
         self.isAttached = false
     }
+    func breakToes() {
+    }
+    func paintToeNails() {
+    }
+    func smellBad() {
+    }
 }
 class Ears : BodyPart {
     override init() {
@@ -150,6 +202,12 @@ class Ears : BodyPart {
         self.canDrinkBeer = false
         self.numberOfParts = 2
         self.numberOfJoints = 0
+    }
+    func growHair() {
+    }
+    func haveGauges() {
+    }
+    func listenToSlayer() {
     }
 }
 class Heart : BodyPart {
@@ -159,6 +217,12 @@ class Heart : BodyPart {
         self.isBroken = true
         self.numberOfJoints = 0
     }
+    func pumpBlood() {
+    }
+    func beWhereTheHomeIs() {
+    }
+    func becomeSad() {
+    }
 }
 class Nose : BodyPart {
     override init() {
@@ -166,6 +230,12 @@ class Nose : BodyPart {
         self.isBroken = false
         self.isPowerful = false
         self.canDrinkBeer = true
+    }
+    func becomeBroken() {
+    }
+    func beStuffy() {
+    }
+    func getACoolNoseRing () {
     }
 }
 class Eyes : BodyPart {
@@ -175,6 +245,12 @@ class Eyes : BodyPart {
         self.numberOfJoints = 0
         self.color = "Blue"
     }
+    func cry() {
+    }
+    func lookAtStuff() {
+    }
+    func requireSunglasses() {
+    }
 }
 class Neck : BodyPart {
     override init() {
@@ -182,6 +258,12 @@ class Neck : BodyPart {
         self.length = 9
         self.isAttached = true
         self.isBroken = true
+    }
+    func hurtInTheMorning() {
+    }
+    func beHellaTatted() {
+    }
+    func lookStupid() {
     }
 }
 class Tongue : BodyPart {
@@ -191,6 +273,12 @@ class Tongue : BodyPart {
         self.canDrinkBeer = false
         self.color = "Blue"
     }
+    func helpWithSpeech() {
+    }
+    func stickOutAtChildren() {
+    }
+    func getRemovedForMouthingOff() {
+    }
 }
 class Teeth : BodyPart {
     override init() {
@@ -198,6 +286,12 @@ class Teeth : BodyPart {
         self.numberOfParts = 2
         self.isBroken = true
         self.isPowerful = true
+    }
+    func chewOnStuff() {
+    }
+    func removeFinger() {
+    }
+    func getCavity() {
     }
 }
 class Stomach : BodyPart {
@@ -207,6 +301,12 @@ class Stomach : BodyPart {
         self.isPowerful = false
         self.isAttached = false
     }
+    func expellContents() {
+    }
+    func gainUlcer() {
+    }
+    func digestFood() {
+    }
 }
 class Kidneys : BodyPart {
     override init() {
@@ -215,6 +315,12 @@ class Kidneys : BodyPart {
         self.isAttached = true
         self.isBroken = false
     }
+    func fail() {
+    }
+    func fallOutOfBodyForNoReason() {
+    }
+    func duplicate() {
+    }
 }
 class Trachea : BodyPart {
     override init() {
@@ -222,6 +328,12 @@ class Trachea : BodyPart {
         self.canDrinkBeer = true
         self.isAttached = false
         self.color = "Purple"
+    }
+    func becomeScarred() {
+    }
+    func lightOnFire() {
+    }
+    func getTracheotomy() {
     }
 }
 class EyeBrows : BodyPart {
@@ -232,6 +344,12 @@ class EyeBrows : BodyPart {
         self.length = 600
         self.hitWithHammer()
     }
+    func becomePierced() {
+    }
+    func gainSteps() {
+    }
+    func fallOut() {
+    }
 }
 class Lips : BodyPart {
     override init() {
@@ -241,7 +359,27 @@ class Lips : BodyPart {
         self.color = "Grey"
         self.doAnything()
     }
+    func getHerpes() {
+    }
+    func kissStuff() {
+    }
+    func useStraw() {
+    }
 }
+class ForeHead : BodyPart {
+    override init() {
+        super.init()
+        super.removeBodyPart()
+    }
+    func hitAgainstConcrete() {
+    }
+    func acquireZits() {
+    }
+    func bleedProfusely() {
+    }
+}
+
+
 var leftArm = Arm()
 var mouth = Head()
 var rightArm = Arm()
@@ -250,22 +388,12 @@ var rightLeg = Leg()
 var leftVentricle = Heart()
 var aorta = Heart()
 var allTeeth = Teeth()
-leftArm.hitWithHammer()
-leftArm.removeBodyPart()
-leftArm.attachBodyPart()
-leftArm.attachBodyPart()
-leftArm.injectWithSteroids()
-leftArm.drinkBeer()
-mouth.drinkBeer()
-Arm.drinkBeer(leftArm)
-aorta.hitWithHammer()
-allTeeth.removeBodyPart()
-allTeeth.hitWithHammer()
-mouth.removeBodyPart()
-mouth.removeTattoo()
-rightArm.removeBodyPart()
-leftLeg.removeBodyPart()
-rightLeg.removeBodyPart()
-leftVentricle.hitWithHammer()
-aorta.injectWithSteroids()
-rightLeg.doAnything()
+var arm = Arm()
+var leftLung = Lungs()
+arm.removeBodyPart()
+leftLung.drinkBeer()
+leftLung.hitWithHammer()
+leftLung.smoke()
+
+
+
