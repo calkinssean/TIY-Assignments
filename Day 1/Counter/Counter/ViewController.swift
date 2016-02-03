@@ -46,7 +46,7 @@ class ViewController: UIViewController
         if countTextField.isFirstResponder()
         {
             countTextField.resignFirstResponder()
-                       updateViewsWithCurrentCount()
+            updateViewsWithCurrentCount()
         }
     }
     
@@ -63,4 +63,10 @@ class ViewController: UIViewController
         currentCount = Int(sender.value)
         updateViewsWithCurrentCount()
     }
+   
+    @IBAction func textFieldDidEnd(sender: AnyObject) {
+        print("did end on exit")
+        
+    }
+    
 }
