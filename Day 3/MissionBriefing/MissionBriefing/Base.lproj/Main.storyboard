@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MissionBriefing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZ2-oi-tju">
+                                <rect key="frame" x="60" y="106" width="480" height="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Voi-3D-SfH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Q3-52-zdH">
+                                <rect key="frame" x="244" y="153" width="111" height="28"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.2568151595744681" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                <state key="normal" title=" Authenticate ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AuthenticateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lX-Lc-viR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reO-DI-h5n">
+                                <rect key="frame" x="61" y="199" width="480" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-v1-1t7">
+                                <rect key="frame" x="180" y="308" width="240" height="212"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agent Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="orS-WZ-LUl">
+                                <rect key="frame" x="60" y="68" width="480" height="30"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lbO-cC-ane"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AZ2-oi-tju" firstAttribute="top" secondItem="orS-WZ-LUl" secondAttribute="bottom" constant="8" id="CC8-hr-rlE"/>
+                            <constraint firstItem="reO-DI-h5n" firstAttribute="top" secondItem="0Q3-52-zdH" secondAttribute="bottom" constant="18" id="Pvz-FW-4PJ"/>
+                            <constraint firstItem="orS-WZ-LUl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="THR-S8-0PU"/>
+                            <constraint firstItem="reO-DI-h5n" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="YpE-6P-aCp"/>
+                            <constraint firstItem="orS-WZ-LUl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="YxV-vb-3lG"/>
+                            <constraint firstItem="reO-DI-h5n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="ddU-sm-GV9"/>
+                            <constraint firstItem="AZ2-oi-tju" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="h9X-xJ-3vf"/>
+                            <constraint firstItem="AZ2-oi-tju" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iak-MN-JVA"/>
+                            <constraint firstItem="UP8-v1-1t7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lo7-Uh-jRc"/>
+                            <constraint firstItem="0Q3-52-zdH" firstAttribute="top" secondItem="AZ2-oi-tju" secondAttribute="bottom" constant="17" id="mD0-TB-8ug"/>
+                            <constraint firstItem="orS-WZ-LUl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="nVU-2W-B4k"/>
+                            <constraint firstItem="UP8-v1-1t7" firstAttribute="top" secondItem="reO-DI-h5n" secondAttribute="bottom" constant="109" id="ssB-BS-GPa"/>
+                            <constraint firstItem="0Q3-52-zdH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVJ-pQ-vXD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AuthenticateButton" destination="0Q3-52-zdH" id="RdZ-cL-nLg"/>
+                        <outlet property="TIYLogo" destination="UP8-v1-1t7" id="2Dv-C8-mJj"/>
+                        <outlet property="authenticationButton" destination="0Q3-52-zdH" id="0hx-SX-GuV"/>
+                        <outlet property="greetingLabel" destination="reO-DI-h5n" id="cdM-Wr-xpW"/>
+                        <outlet property="nameTextField" destination="orS-WZ-LUl" id="kMy-mQ-auW"/>
+                        <outlet property="passwordTextField" destination="AZ2-oi-tju" id="6hH-QJ-8et"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TIYLogo" width="240" height="212"/>
+    </resources>
+</document>
