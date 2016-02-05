@@ -16,7 +16,7 @@ func countdown(var N: Int) {
         print("Go!")
     }
 }
-countdown(5)
+countdown(24)
 
 
 func otherCountdown(var X: Int) {
