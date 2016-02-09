@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843" y="-377"/>
+            <point key="canvasLocation" x="849" y="-371"/>
         </scene>
         <!--No Roads View Controller-->
         <scene sceneID="nrL-VQ-2RC">
