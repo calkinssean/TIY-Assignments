@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14FAF1E71C6A540D00D5BCEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF1E61C6A540D00D5BCEC /* AppDelegate.swift */; };
+		14FAF1E91C6A540D00D5BCEC /* BallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF1E81C6A540D00D5BCEC /* BallViewController.swift */; };
+		14FAF1EC1C6A540D00D5BCEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF1EA1C6A540D00D5BCEC /* Main.storyboard */; };
+		14FAF1EE1C6A540D00D5BCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF1ED1C6A540D00D5BCEC /* Assets.xcassets */; };
+		14FAF1F11C6A540D00D5BCEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF1EF1C6A540D00D5BCEC /* LaunchScreen.storyboard */; };
+		14FAF1F91C6A54EF00D5BCEC /* LobsterTwo-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14FAF1F81C6A54EF00D5BCEC /* LobsterTwo-BoldItalic.otf */; };
+		14FAF1FB1C6A574800D5BCEC /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF1FA1C6A574800D5BCEC /* TicketTableViewController.swift */; };
+		14FAF1FD1C6A5CB900D5BCEC /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF1FC1C6A5CB900D5BCEC /* TicketTableViewCell.swift */; };
+		14FAF1FF1C6A5E8B00D5BCEC /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF1FE1C6A5E8B00D5BCEC /* Ticket.swift */; };
+		14FAF2011C6AB28F00D5BCEC /* winSlashLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FAF2001C6AB28F00D5BCEC /* winSlashLoseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14FAF1E31C6A540D00D5BCEC /* JackpotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackpotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14FAF1E61C6A540D00D5BCEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14FAF1E81C6A540D00D5BCEC /* BallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallViewController.swift; sourceTree = "<group>"; };
+		14FAF1EB1C6A540D00D5BCEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14FAF1ED1C6A540D00D5BCEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14FAF1F01C6A540D00D5BCEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14FAF1F21C6A540D00D5BCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FAF1F81C6A54EF00D5BCEC /* LobsterTwo-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.otf"; sourceTree = "<group>"; };
+		14FAF1FA1C6A574800D5BCEC /* TicketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
+		14FAF1FC1C6A5CB900D5BCEC /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TicketTableViewCell.swift; path = ../TicketTableViewCell.swift; sourceTree = "<group>"; };
+		14FAF1FE1C6A5E8B00D5BCEC /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ticket.swift; path = ../Ticket.swift; sourceTree = "<group>"; };
+		14FAF2001C6AB28F00D5BCEC /* winSlashLoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = winSlashLoseViewController.swift; path = ../winSlashLoseViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14FAF1E01C6A540D00D5BCEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14FAF1DA1C6A540D00D5BCEC = {
+			isa = PBXGroup;
+			children = (
+				14FAF1E51C6A540D00D5BCEC /* JackpotApp */,
+				14FAF1E41C6A540D00D5BCEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14FAF1E41C6A540D00D5BCEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14FAF1E31C6A540D00D5BCEC /* JackpotApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14FAF1E51C6A540D00D5BCEC /* JackpotApp */ = {
+			isa = PBXGroup;
+			children = (
+				14FAF1E61C6A540D00D5BCEC /* AppDelegate.swift */,
+				14FAF1FE1C6A5E8B00D5BCEC /* Ticket.swift */,
+				14FAF1F81C6A54EF00D5BCEC /* LobsterTwo-BoldItalic.otf */,
+				14FAF1FC1C6A5CB900D5BCEC /* TicketTableViewCell.swift */,
+				14FAF1FA1C6A574800D5BCEC /* TicketTableViewController.swift */,
+				14FAF1E81C6A540D00D5BCEC /* BallViewController.swift */,
+				14FAF2001C6AB28F00D5BCEC /* winSlashLoseViewController.swift */,
+				14FAF1EA1C6A540D00D5BCEC /* Main.storyboard */,
+				14FAF1ED1C6A540D00D5BCEC /* Assets.xcassets */,
+				14FAF1EF1C6A540D00D5BCEC /* LaunchScreen.storyboard */,
+				14FAF1F21C6A540D00D5BCEC /* Info.plist */,
+			);
+			path = JackpotApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14FAF1E21C6A540D00D5BCEC /* JackpotApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14FAF1F51C6A540D00D5BCEC /* Build configuration list for PBXNativeTarget "JackpotApp" */;
+			buildPhases = (
+				14FAF1DF1C6A540D00D5BCEC /* Sources */,
+				14FAF1E01C6A540D00D5BCEC /* Frameworks */,
+				14FAF1E11C6A540D00D5BCEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JackpotApp;
+			productName = JackpotApp;
+			productReference = 14FAF1E31C6A540D00D5BCEC /* JackpotApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14FAF1DB1C6A540D00D5BCEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sean Calkins";
+				TargetAttributes = {
+					14FAF1E21C6A540D00D5BCEC = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 14FAF1DE1C6A540D00D5BCEC /* Build configuration list for PBXProject "JackpotApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14FAF1DA1C6A540D00D5BCEC;
+			productRefGroup = 14FAF1E41C6A540D00D5BCEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14FAF1E21C6A540D00D5BCEC /* JackpotApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14FAF1E11C6A540D00D5BCEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14FAF1F11C6A540D00D5BCEC /* LaunchScreen.storyboard in Resources */,
+				14FAF1F91C6A54EF00D5BCEC /* LobsterTwo-BoldItalic.otf in Resources */,
+				14FAF1EE1C6A540D00D5BCEC /* Assets.xcassets in Resources */,
+				14FAF1EC1C6A540D00D5BCEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14FAF1DF1C6A540D00D5BCEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14FAF1E91C6A540D00D5BCEC /* BallViewController.swift in Sources */,
+				14FAF1E71C6A540D00D5BCEC /* AppDelegate.swift in Sources */,
+				14FAF1FF1C6A5E8B00D5BCEC /* Ticket.swift in Sources */,
+				14FAF1FB1C6A574800D5BCEC /* TicketTableViewController.swift in Sources */,
+				14FAF2011C6AB28F00D5BCEC /* winSlashLoseViewController.swift in Sources */,
+				14FAF1FD1C6A5CB900D5BCEC /* TicketTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14FAF1EA1C6A540D00D5BCEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14FAF1EB1C6A540D00D5BCEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14FAF1EF1C6A540D00D5BCEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14FAF1F01C6A540D00D5BCEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14FAF1F31C6A540D00D5BCEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14FAF1F41C6A540D00D5BCEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14FAF1F61C6A540D00D5BCEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JackpotApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanCalkins.JackpotApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		14FAF1F71C6A540D00D5BCEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JackpotApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanCalkins.JackpotApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14FAF1DE1C6A540D00D5BCEC /* Build configuration list for PBXProject "JackpotApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FAF1F31C6A540D00D5BCEC /* Debug */,
+				14FAF1F41C6A540D00D5BCEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14FAF1F51C6A540D00D5BCEC /* Build configuration list for PBXNativeTarget "JackpotApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FAF1F61C6A540D00D5BCEC /* Debug */,
+				14FAF1F71C6A540D00D5BCEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14FAF1DB1C6A540D00D5BCEC /* Project object */;
+}

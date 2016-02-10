@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kc1-n4-lpK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LobsterTwo-BoldItalic.otf">
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+            <string>LobsterTwo-BoldItalic</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Ball View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BallViewController" customModule="JackpotApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Gzd-qx-xjh">
+                                <rect key="frame" x="93" y="327" width="414" height="96"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-tu-eDc">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBall" translatesAutoresizingMaskIntoConstraints="NO" id="okw-Qn-zQC">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="69" id="80F-pX-lel"/>
+                                                    <constraint firstAttribute="height" constant="69" id="L7o-Y8-PgC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbZ-Ae-4hE">
+                                                <rect key="frame" x="13" y="24" width="41.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rbZ-Ae-4hE" firstAttribute="centerX" secondItem="1bc-tu-eDc" secondAttribute="centerX" id="2OR-75-g1F"/>
+                                            <constraint firstAttribute="height" constant="69" id="dBj-cm-aLJ"/>
+                                            <constraint firstItem="rbZ-Ae-4hE" firstAttribute="centerY" secondItem="1bc-tu-eDc" secondAttribute="centerY" id="fEd-N8-4Jx"/>
+                                            <constraint firstItem="okw-Qn-zQC" firstAttribute="centerX" secondItem="1bc-tu-eDc" secondAttribute="centerX" id="fdk-aw-9We"/>
+                                            <constraint firstAttribute="width" constant="69" id="s0x-Aa-SJx"/>
+                                            <constraint firstItem="okw-Qn-zQC" firstAttribute="centerY" secondItem="1bc-tu-eDc" secondAttribute="centerY" id="sbo-Xn-SF2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPD-4R-LND">
+                                        <rect key="frame" x="69" y="0.0" width="69" height="69"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBall" translatesAutoresizingMaskIntoConstraints="NO" id="rvT-nz-W7W">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="69" id="7hj-7t-dNG"/>
+                                                    <constraint firstAttribute="height" constant="69" id="Zjl-WC-sK2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urt-SR-M1U">
+                                                <rect key="frame" x="10" y="24" width="50.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="urt-SR-M1U" firstAttribute="centerY" secondItem="MPD-4R-LND" secondAttribute="centerY" id="0bS-Ra-t52"/>
+                                            <constraint firstItem="urt-SR-M1U" firstAttribute="centerX" secondItem="MPD-4R-LND" secondAttribute="centerX" id="BC6-F9-QQX"/>
+                                            <constraint firstItem="rvT-nz-W7W" firstAttribute="centerY" secondItem="MPD-4R-LND" secondAttribute="centerY" id="Dva-N1-wKd"/>
+                                            <constraint firstAttribute="height" constant="69" id="LQl-2O-HIn"/>
+                                            <constraint firstItem="rvT-nz-W7W" firstAttribute="centerX" secondItem="MPD-4R-LND" secondAttribute="centerX" id="MB9-hv-Uag"/>
+                                            <constraint firstAttribute="width" constant="69" id="spF-bU-hTl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7x-5D-bWl">
+                                        <rect key="frame" x="138" y="0.0" width="69" height="69"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBall" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-g6-eQM">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="69" id="BN9-Xm-EZw"/>
+                                                    <constraint firstAttribute="width" constant="69" id="m8k-6s-fif"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa5-Yf-Ovj">
+                                                <rect key="frame" x="8" y="24" width="52" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="69" id="NSJ-tV-mgO"/>
+                                            <constraint firstAttribute="width" constant="69" id="Rdc-2u-c14"/>
+                                            <constraint firstItem="xa5-Yf-Ovj" firstAttribute="centerX" secondItem="V7x-5D-bWl" secondAttribute="centerX" id="mtR-uT-X9L"/>
+                                            <constraint firstItem="sUC-g6-eQM" firstAttribute="centerX" secondItem="V7x-5D-bWl" secondAttribute="centerX" id="rxW-h5-c2l"/>
+                                            <constraint firstItem="sUC-g6-eQM" firstAttribute="centerY" secondItem="V7x-5D-bWl" secondAttribute="centerY" id="wSR-2X-Mdw"/>
+                                            <constraint firstItem="xa5-Yf-Ovj" firstAttribute="centerY" secondItem="V7x-5D-bWl" secondAttribute="centerY" id="yOa-UK-FkR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBO-tK-MqJ">
+                                        <rect key="frame" x="207" y="0.0" width="69" height="69"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBall" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-YE-jfV">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="69" id="jpC-dU-H9L"/>
+                                                    <constraint firstAttribute="height" constant="69" id="p58-Up-teO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lux-D7-OZE">
+                                                <rect key="frame" x="8" y="24" width="52.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="69" id="D8R-hr-vhv"/>
+                                            <constraint firstAttribute="height" constant="69" id="aWe-Jo-wW4"/>
+                                            <constraint firstItem="Lux-D7-OZE" firstAttribute="centerX" secondItem="VBO-tK-MqJ" secondAttribute="centerX" id="eBN-Jc-LCh"/>
+                                            <constraint firstItem="uHs-YE-jfV" firstAttribute="centerX" secondItem="VBO-tK-MqJ" secondAttribute="centerX" id="i2O-cn-zyZ"/>
+                                            <constraint firstItem="Lux-D7-OZE" firstAttribute="centerY" secondItem="VBO-tK-MqJ" secondAttribute="centerY" id="lyf-bq-Bgk"/>
+                                            <constraint firstItem="uHs-YE-jfV" firstAttribute="centerY" secondItem="VBO-tK-MqJ" secondAttribute="centerY" id="t7W-jP-Zja"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onz-me-eCa">
+                                        <rect key="frame" x="276" y="0.0" width="69" height="69"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBall" translatesAutoresizingMaskIntoConstraints="NO" id="mXL-cu-8cM">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="69" id="Fec-hF-E7F"/>
+                                                    <constraint firstAttribute="height" constant="69" id="YFU-vH-UFB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-oo-E5q">
+                                                <rect key="frame" x="9" y="24" width="52" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="mXL-cu-8cM" firstAttribute="centerX" secondItem="onz-me-eCa" secondAttribute="centerX" id="2Kr-FP-G9D"/>
+                                            <constraint firstItem="pC2-oo-E5q" firstAttribute="centerY" secondItem="onz-me-eCa" secondAttribute="centerY" id="FHe-hp-V6K"/>
+                                            <constraint firstItem="mXL-cu-8cM" firstAttribute="centerY" secondItem="onz-me-eCa" secondAttribute="centerY" id="Fjf-M9-eeX"/>
+                                            <constraint firstAttribute="height" constant="69" id="c4L-1c-6l1"/>
+                                            <constraint firstAttribute="width" constant="69" id="kVd-jx-2ZW"/>
+                                            <constraint firstItem="pC2-oo-E5q" firstAttribute="centerX" secondItem="onz-me-eCa" secondAttribute="centerX" id="lFW-Jy-nBt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-rH-92d">
+                                        <rect key="frame" x="345" y="0.0" width="69" height="69"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlankBall" translatesAutoresizingMaskIntoConstraints="NO" id="1gh-aK-FbN">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="69" id="9JB-yF-7n5"/>
+                                                    <constraint firstAttribute="width" constant="69" id="GD1-lu-Y1o"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-ab-dnj">
+                                                <rect key="frame" x="9" y="24" width="52" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="1gh-aK-FbN" firstAttribute="centerX" secondItem="vVG-rH-92d" secondAttribute="centerX" id="18e-jk-0ju"/>
+                                            <constraint firstAttribute="width" constant="69" id="4zA-Ip-bnR"/>
+                                            <constraint firstItem="qgy-ab-dnj" firstAttribute="centerY" secondItem="vVG-rH-92d" secondAttribute="centerY" id="5Wv-Sa-rBU"/>
+                                            <constraint firstItem="1gh-aK-FbN" firstAttribute="centerY" secondItem="vVG-rH-92d" secondAttribute="centerY" id="9Ws-Jy-4MZ"/>
+                                            <constraint firstAttribute="height" constant="69" id="Pa3-Zp-55I"/>
+                                            <constraint firstItem="qgy-ab-dnj" firstAttribute="centerX" secondItem="vVG-rH-92d" secondAttribute="centerX" id="cm5-cj-uxU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwl-6e-w01">
+                                <rect key="frame" x="300" y="287" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWs-RK-wjC">
+                                <rect key="frame" x="167" y="203" width="266" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="25"/>
+                                <state key="normal" title=" Check For Winning Ticket ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkForWinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJJ-oR-MAh"/>
+                                    <segue destination="3h2-N1-row" kind="show" identifier="winSlashLoseSegue" id="JBL-WK-77B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DWs-RK-wjC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-75" id="2aw-aq-OX3"/>
+                            <constraint firstItem="Jwl-6e-w01" firstAttribute="top" secondItem="DWs-RK-wjC" secondAttribute="bottom" constant="40" id="8D9-Yd-XXs"/>
+                            <constraint firstItem="Gzd-qx-xjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l7k-7j-MJr"/>
+                            <constraint firstItem="Jwl-6e-w01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="osF-1U-8Vz"/>
+                            <constraint firstItem="DWs-RK-wjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="peT-7z-xOh"/>
+                            <constraint firstItem="Gzd-qx-xjh" firstAttribute="top" secondItem="Jwl-6e-w01" secondAttribute="bottom" constant="40" id="s1X-og-y1X"/>
+                            <constraint firstItem="Gzd-qx-xjh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="75" id="sMg-qE-Oap"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballLabel1" destination="rbZ-Ae-4hE" id="grW-5l-xny"/>
+                        <outlet property="ballLabel2" destination="urt-SR-M1U" id="Rbh-Ci-nOO"/>
+                        <outlet property="ballLabel3" destination="xa5-Yf-Ovj" id="PpW-D9-ALj"/>
+                        <outlet property="ballLabel4" destination="Lux-D7-OZE" id="1YF-iP-bxA"/>
+                        <outlet property="ballLabel5" destination="pC2-oo-E5q" id="FV9-xU-OTs"/>
+                        <outlet property="ballLabel6" destination="qgy-ab-dnj" id="nsw-Tx-5Yc"/>
+                        <outlet property="checkForWinButton" destination="DWs-RK-wjC" id="3c5-Hc-HuJ"/>
+                        <outlet property="tryAgainLabel" destination="Jwl-6e-w01" id="0t4-7P-p7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="-134"/>
+        </scene>
+        <!--Win Slash Lose View Controller-->
+        <scene sceneID="sav-Mp-2W4">
+            <objects>
+                <viewController id="3h2-N1-row" customClass="winSlashLoseViewController" customModule="JackpotApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yEE-Lh-2N0"/>
+                        <viewControllerLayoutGuide type="bottom" id="QpQ-ud-RHI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rfd-iS-QHt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKa-kQ-16B">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QpQ-ud-RHI" firstAttribute="top" secondItem="BKa-kQ-16B" secondAttribute="bottom" id="BaD-4r-qlS"/>
+                            <constraint firstItem="BKa-kQ-16B" firstAttribute="top" secondItem="yEE-Lh-2N0" secondAttribute="bottom" id="Sp7-fW-vAF"/>
+                            <constraint firstAttribute="trailing" secondItem="BKa-kQ-16B" secondAttribute="trailing" id="WwX-U9-N9T"/>
+                            <constraint firstItem="BKa-kQ-16B" firstAttribute="leading" secondItem="Rfd-iS-QHt" secondAttribute="leading" id="YfH-ui-jQ8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="winSlashLoseImage" destination="BKa-kQ-16B" id="8uX-uZ-uB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oa3-fc-eWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3166" y="-134"/>
+        </scene>
+        <!--Jackpot-->
+        <scene sceneID="c5x-kA-x1b">
+            <objects>
+                <tableViewController title="Jackpot" id="QUM-Ac-y6P" customClass="TicketTableViewController" customModule="JackpotApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" id="5M6-tn-bNy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" rowHeight="44" id="GE7-0Y-l6S" customClass="TicketTableViewCell" customModule="JackpotApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GE7-0Y-l6S" id="v6Q-Dg-KSM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Po7-Qy-YKX">
+                                            <rect key="frame" x="125" y="11" width="350" height="21.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7j-vG-bma">
+                                                    <rect key="frame" x="0.0" y="0.0" width="35.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOO-zd-V0M">
+                                                    <rect key="frame" x="63" y="0.0" width="35.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oS7-yM-JY6">
+                                                    <rect key="frame" x="126" y="0.0" width="35.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqw-8u-Bae">
+                                                    <rect key="frame" x="188" y="0.0" width="35.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x7-Sn-izO">
+                                                    <rect key="frame" x="251" y="0.0" width="35.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2d-wr-eTu">
+                                                    <rect key="frame" x="314" y="0.0" width="35.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="LobsterTwo-BoldItalic" family="Lobster Two" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="350" id="rHn-Jz-ZA7"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Po7-Qy-YKX" firstAttribute="centerX" secondItem="v6Q-Dg-KSM" secondAttribute="centerX" id="81b-YA-amc"/>
+                                        <constraint firstItem="Po7-Qy-YKX" firstAttribute="centerY" secondItem="v6Q-Dg-KSM" secondAttribute="centerY" id="XFj-iJ-bCn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="number1" destination="c7j-vG-bma" id="7xB-mH-4cR"/>
+                                    <outlet property="number2" destination="xOO-zd-V0M" id="Qrm-IK-8Cu"/>
+                                    <outlet property="number3" destination="oS7-yM-JY6" id="zpP-P0-KiC"/>
+                                    <outlet property="number4" destination="Cqw-8u-Bae" id="uLa-j4-CLH"/>
+                                    <outlet property="number5" destination="1x7-Sn-izO" id="Kck-Ru-zyQ"/>
+                                    <outlet property="number6" destination="z2d-wr-eTu" id="b2Z-6q-X0R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QUM-Ac-y6P" id="rHU-NY-7kx"/>
+                            <outlet property="delegate" destination="QUM-Ac-y6P" id="1Qp-MQ-Bq7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Jackpot" id="iw9-Bp-5tH" colorLabel="IBBuiltInLabel-Green">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zll-Ai-y2b">
+                            <connections>
+                                <action selector="addTicket:" destination="QUM-Ac-y6P" id="r4g-b8-qMD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="viewControllerSegue" id="rjO-5f-nfk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSk-81-WSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="-182"/>
+        </scene>
+        <!--Jackpot-->
+        <scene sceneID="BkA-gl-8l8">
+            <objects>
+                <navigationController title="Jackpot" automaticallyAdjustsScrollViewInsets="NO" id="Kc1-n4-lpK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u3E-t5-nUr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QUM-Ac-y6P" kind="relationship" relationship="rootViewController" id="et8-1j-ycW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0s-il-Hgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-197"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlankBall" width="308" height="308"/>
+    </resources>
+</document>
