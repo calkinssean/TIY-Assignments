@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146D8DE81C6E3DDB003E9BAC /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D8DE71C6E3DDB003E9BAC /* CalculatorBrain.swift */; };
 		14C23BF61C6BF43B00D022C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23BF51C6BF43B00D022C2 /* AppDelegate.swift */; };
 		14C23BF81C6BF43B00D022C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C23BF71C6BF43B00D022C2 /* ViewController.swift */; };
 		14C23BFB1C6BF43B00D022C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C23BF91C6BF43B00D022C2 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		146D8DE71C6E3DDB003E9BAC /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculatorBrain.swift; path = ../CalculatorBrain.swift; sourceTree = "<group>"; };
 		14C23BF21C6BF43B00D022C2 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C23BF51C6BF43B00D022C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C23BF71C6BF43B00D022C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				14C23BF51C6BF43B00D022C2 /* AppDelegate.swift */,
 				14C23C091C6C093700D022C2 /* BorderButton.swift */,
+				146D8DE71C6E3DDB003E9BAC /* CalculatorBrain.swift */,
 				14C23BF71C6BF43B00D022C2 /* ViewController.swift */,
 				14C23BF91C6BF43B00D022C2 /* Main.storyboard */,
 				14C23BFC1C6BF43B00D022C2 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				14C23BF81C6BF43B00D022C2 /* ViewController.swift in Sources */,
 				14C23BF61C6BF43B00D022C2 /* AppDelegate.swift in Sources */,
+				146D8DE81C6E3DDB003E9BAC /* CalculatorBrain.swift in Sources */,
 				14C23C0A1C6C093700D022C2 /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -62,14 +63,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-vF-5qL">
+                                <rect key="frame" x="279" y="290" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ahU-vF-5qL" firstAttribute="centerX" secondItem="V9M-KV-Kit" secondAttribute="centerX" id="Fd4-n2-YOz"/>
+                            <constraint firstItem="ahU-vF-5qL" firstAttribute="width" secondItem="V9M-KV-Kit" secondAttribute="width" multiplier="0.8" id="NAQ-H9-9Ih"/>
                             <constraint firstItem="qPV-66-Toq" firstAttribute="top" secondItem="aLB-DC-5Ue" secondAttribute="bottom" constant="51" id="TE5-2t-RUa"/>
+                            <constraint firstItem="ahU-vF-5qL" firstAttribute="centerY" secondItem="V9M-KV-Kit" secondAttribute="centerY" id="hs0-zS-14x"/>
                             <constraint firstItem="qPV-66-Toq" firstAttribute="centerX" secondItem="V9M-KV-Kit" secondAttribute="centerX" id="rVg-K9-QG2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="movieDetailsLabel" destination="ahU-vF-5qL" id="6Z1-gS-lOj"/>
                         <outlet property="titleLabel" destination="qPV-66-Toq" id="5tZ-Mh-CgD"/>
                     </connections>
                 </viewController>
