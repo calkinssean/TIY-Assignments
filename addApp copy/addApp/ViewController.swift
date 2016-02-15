@@ -8,80 +8,108 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var numberLabel: UILabel!
+    
     var value2: Double = 0
     var value1: Double = 0
     var runningTotal: Double = 0
     var operatorString = ""
-    var hasTypedNumber = false
-    var hasPerformedCalculation = false
     var isFirstTap = true
-    var brain = CalculatorBrain()
-    
+    var hasPerformedCalculation = false
+    var hasTypedNumber = false
     
     @IBAction func addButtonTapped(sender: UIButton) {
-        operatorString = "+"
+        
         print("addButtonTapped")
-        if hasTypedNumber == true {
-            value2 = value1
-            runningTotal = runningTotal + value2
+        
+        if hasPerformedCalculation == true {
+            operatorString = "+"
             value1 = 0
-            hasTypedNumber = false
-            print(runningTotal)
             updateUI()
             hasPerformedCalculation = false
+        }
+        if isFirstTap == true {
+            operatorString = "+"
+            runningTotal = value1
+            value1 = 0
+            isFirstTap = false
+            updateUI()
         } else {
+            calculate()
+            operatorString = "+"
+            value1 = 0
+            updateUI()
             
         }
         
         
     }
-    @IBAction func minusButtonTapped(sender: UIButton) {
-        operatorString = "-"
-        print("minusButtonTapped")
     
-        if isFirstTap == true {
-            value2 = value1
-            runningTotal = runningTotal + value2
+    @IBAction func multiplicationTapped(sender: UIButton) {
+        
+        if hasPerformedCalculation == true {
+            operatorString = "*"
             value1 = 0
-            value2 = 0
-            isFirstTap = false
-            print(runningTotal)
-        } else if isFirstTap == false {
-            runningTotal = runningTotal - value1
-            value1 = 0
-            print(runningTotal)
             updateUI()
             hasPerformedCalculation = false
+            print(value1, runningTotal)
+        }
+        if isFirstTap == true {
+            operatorString = "*"
+            runningTotal = value1
+            value1 = 0
+            isFirstTap = false
+            updateUI()
+            print(value1, runningTotal)
+        }
+        else if hasTypedNumber == true {
+            calculate()
+            operatorString = "*"
+            value1 = 0
+            updateUI()
+            print(value1, runningTotal)
+        }
+        
+    }
+    
+    
+    
+    
+    @IBAction func minusButtonTapped(sender: UIButton) {
+        
+        print("minusButtonTapped")
+        
+        if hasPerformedCalculation == true {
+            operatorString = "-"
+            value1 = 0
+            updateUI()
+            hasPerformedCalculation = false
+        }
+        if isFirstTap == true {
+            operatorString = "-"
+            runningTotal = value1
+            value1 = 0
+            isFirstTap = false
+            updateUI()
+        } else {
+            calculate()
+            operatorString = "-"
+            value1 = 0
+            updateUI()
             
         }
         
-    
     }
     @IBAction func equalsButtonTapped(sender: UIButton) {
-        if hasPerformedCalculation == false && hasTypedNumber == true {
-            
-            if operatorString == "+" {
-                runningTotal = runningTotal + value1
-                hasPerformedCalculation = true
-                updateUI()
-                value1 = 0
-                print(runningTotal)
-            }
-            if operatorString == "-" {
-                runningTotal = runningTotal - value1
-                value1 = 0
-                print(runningTotal)
-                updateUI()
-                isFirstTap = true
-                hasPerformedCalculation = true
-            }
-        } else if hasTypedNumber == true && hasPerformedCalculation == false {
-            runningTotal = value1
-            updateUI()
-        }
+        
+        calculate()
+        value1 = 0
+        updateUI()
+        hasPerformedCalculation = true
+        print(value1, runningTotal)
     }
     
     
@@ -89,10 +117,9 @@ class ViewController: UIViewController {
     @IBAction func numberButtons(sender: UIButton) {
         
         value2 = 0
-        
         value1 = ((value1 * 10) + Double(sender.tag))
-        
         numberLabel.text = "\(value1)"
+        print(value1, runningTotal)
         hasTypedNumber = true
         
     }
@@ -105,6 +132,22 @@ class ViewController: UIViewController {
         updateUI()
     }
     
+    func calculate () {
+        if operatorString == "+" {
+            runningTotal = runningTotal + value1
+        }
+        if operatorString == "-" {
+            runningTotal = runningTotal - value1
+        }
+        if operatorString == "*" {
+            runningTotal = runningTotal * value1
+        }
+    }
+    
+    func updateUI() {
+        
+        numberLabel.text = "\(runningTotal)"
+    }
     
     func convertStringToDouble(str: String?) -> Double {
         
@@ -117,10 +160,6 @@ class ViewController: UIViewController {
         returnDouble = Double(str!)!
         
         return returnDouble
-    }
-    
-    func updateUI() {
-        numberLabel.text = "\(runningTotal)"
     }
     
 }

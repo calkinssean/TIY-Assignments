@@ -19,20 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-g6-z4s">
-                                <rect key="frame" x="285" y="206" width="30" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efp-9N-1tV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFC-dW-FBs">
                                 <rect key="frame" x="285" y="157" width="30" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="minusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QI9-Tj-nd3"/>
+                                    <action selector="minusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5Y-aK-BNR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsp-He-5o2">
@@ -40,7 +32,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="equalsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msP-qC-7nT"/>
+                                    <action selector="equalsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TPs-LE-YVy"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40j-Zs-Zjz">
@@ -186,6 +178,22 @@
                                     <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OEj-GQ-ms0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvD-pl-fb3">
+                                <rect key="frame" x="357" y="206" width="30" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="multiplicationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWQ-1C-f6O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-g6-z4s">
+                                <rect key="frame" x="285" y="206" width="30" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ORc-W0-t0W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -197,8 +205,10 @@
                             <constraint firstItem="hZX-X2-yed" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RfA-41-9R8"/>
                             <constraint firstItem="qf2-g6-z4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQF-yp-nmR"/>
                             <constraint firstItem="40j-Zs-Zjz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y9a-QJ-erV"/>
+                            <constraint firstItem="RvD-pl-fb3" firstAttribute="leading" secondItem="Fsp-He-5o2" secondAttribute="trailing" constant="42" id="fns-n3-6bh"/>
                             <constraint firstItem="Fsp-He-5o2" firstAttribute="top" secondItem="YFC-dW-FBs" secondAttribute="bottom" constant="44" id="hao-wT-vB2"/>
                             <constraint firstItem="YFC-dW-FBs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHq-1k-SUT"/>
+                            <constraint firstItem="40j-Zs-Zjz" firstAttribute="top" secondItem="RvD-pl-fb3" secondAttribute="bottom" constant="56" id="spY-9d-vtv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="40j-Zs-Zjz" secondAttribute="bottom" id="xcI-5B-Eso"/>
                         </constraints>
                     </view>
