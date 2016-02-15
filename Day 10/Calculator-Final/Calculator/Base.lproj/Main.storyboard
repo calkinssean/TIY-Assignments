@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -40,6 +41,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="percentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2S-vh-hdj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNs-Yg-oOC" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="144" width="150" height="72"/>
@@ -54,6 +58,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tci-k2-J0T"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4C-Dh-GQd" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="216" width="150" height="72"/>
@@ -68,6 +75,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wyf-Ja-HvV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="104" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEW-B3-R13" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="450" y="216" width="150" height="72"/>
@@ -82,6 +92,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wrq-pU-tDk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="103" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="der-fm-BHM" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="450" y="288" width="150" height="72"/>
@@ -101,6 +114,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="300" y="192" width="100" height="48"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="equalsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWW-tX-OeY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJe-f9-6g9" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -157,20 +173,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVt-ZS-L9p" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="288" width="150" height="72"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="."/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="piButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xI8-3s-Gbj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-vr-0uB" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -185,6 +190,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sqrtButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqp-mo-nX8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmJ-tx-1XS" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="150" height="72"/>
@@ -199,6 +207,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0AU-gf-6pR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCv-63-W27" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="300" y="216" width="150" height="72"/>
@@ -213,6 +224,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coN-fa-3VG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaE-yL-AeY" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="300" y="72" width="150" height="72"/>
@@ -227,6 +241,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFt-4o-d5C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kw-5g-0Wi" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="300" y="144" width="150" height="72"/>
@@ -241,6 +258,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNR-f6-jfG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="105" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiC-Hu-E7v" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="450" y="144" width="150" height="72"/>
@@ -255,6 +275,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="minusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oLg-J7-SOM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="106" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDv-po-ApH" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="450" y="72" width="150" height="72"/>
@@ -269,6 +292,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="multiplicationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RfS-ec-3qT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="110" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdb-Nc-Mh0" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="150" height="72"/>
@@ -284,7 +310,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W26-mz-Wiz" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W26-mz-Wiz" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="150" y="72" width="150" height="72"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -297,6 +323,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBK-ss-poG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="110" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2M-1R-8Kx" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="72"/>
@@ -311,6 +340,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAO-Kb-HJe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="107" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-YG-xni" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="450" y="0.0" width="150" height="72"/>
@@ -325,6 +357,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="divisionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Klt-nF-SU2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q2-ej-sXs" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="150" y="144" width="150" height="71"/>
@@ -339,6 +374,9 @@
                                                 <real key="value" value="0.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQ7-YO-27M"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agH-ff-yM7" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="150" y="215.5" width="150" height="72.5"/>
@@ -353,6 +391,9 @@
                                                 <real key="value" value="0.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YQ3-cf-IYW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="102" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDr-pB-WTj" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="300" y="288" width="150" height="72"/>
@@ -370,6 +411,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="200" y="192" width="100" height="48"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="negativeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xK9-gH-x8I"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42Y-Yv-RBx" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="150" y="288" width="150" height="72.5"/>
@@ -382,6 +426,23 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="numberButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8A3-jG-dhU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVt-ZS-L9p" customClass="BorderButton" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="288" width="150" height="72"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="."/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -1265,15 +1326,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47k-Y7-EIl">
-                                <rect key="frame" x="495" y="100" width="84.5" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="588" y="94" width="84.5" height="42"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1281,25 +1333,19 @@
                             <constraint firstItem="kfI-h0-oMC" firstAttribute="top" secondItem="c5U-5o-dcl" secondAttribute="bottom" id="2Fu-CU-r8j"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="centerX" secondItem="VwI-8P-K9d" secondAttribute="centerX" id="3Cw-j8-wzk"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="centerX" secondItem="VwI-8P-K9d" secondAttribute="centerX" id="4f8-5w-KBb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="47k-Y7-EIl" secondAttribute="trailing" id="4lh-hC-Adu"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="height" secondItem="VwI-8P-K9d" secondAttribute="height" multiplier="0.6" id="9E8-hL-b2I"/>
                             <constraint firstItem="kfI-h0-oMC" firstAttribute="top" secondItem="c5U-5o-dcl" secondAttribute="bottom" id="AgK-4C-xnQ"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="width" secondItem="VwI-8P-K9d" secondAttribute="width" id="HvC-u9-mfU"/>
-                            <constraint firstItem="47k-Y7-EIl" firstAttribute="top" secondItem="OoW-1e-xKa" secondAttribute="bottom" id="ItC-Kj-34g"/>
                             <constraint firstItem="OoW-1e-xKa" firstAttribute="top" secondItem="VwI-8P-K9d" secondAttribute="topMargin" constant="10" id="JfO-oF-OAb"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="height" secondItem="VwI-8P-K9d" secondAttribute="height" multiplier="0.6" id="L3a-UM-VbF"/>
-                            <constraint firstItem="47k-Y7-EIl" firstAttribute="top" secondItem="OoW-1e-xKa" secondAttribute="bottom" constant="3" id="MLN-vH-TTg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="47k-Y7-EIl" secondAttribute="trailing" id="NX7-aa-voP"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="centerX" secondItem="VwI-8P-K9d" secondAttribute="centerX" id="QL8-n7-Zeh"/>
                             <constraint firstItem="kfI-h0-oMC" firstAttribute="top" secondItem="c5U-5o-dcl" secondAttribute="bottom" id="XG2-6R-dUJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OoW-1e-xKa" secondAttribute="trailing" id="ZUC-vA-cB9"/>
                             <constraint firstItem="OoW-1e-xKa" firstAttribute="trailing" secondItem="VwI-8P-K9d" secondAttribute="trailingMargin" id="b1d-DU-9N1"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="width" secondItem="VwI-8P-K9d" secondAttribute="width" id="h5x-51-udI"/>
-                            <constraint firstItem="47k-Y7-EIl" firstAttribute="top" secondItem="OoW-1e-xKa" secondAttribute="bottom" constant="20" id="ln6-rG-fqg"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="width" secondItem="VwI-8P-K9d" secondAttribute="width" id="mcf-39-BkX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OoW-1e-xKa" secondAttribute="trailing" id="oSh-6K-EvA"/>
                             <constraint firstItem="OoW-1e-xKa" firstAttribute="top" secondItem="LhY-tg-2Ve" secondAttribute="bottom" id="slH-Gb-Qff"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="47k-Y7-EIl" secondAttribute="trailing" id="vri-ZS-RlD"/>
                             <constraint firstItem="c5U-5o-dcl" firstAttribute="height" secondItem="VwI-8P-K9d" secondAttribute="height" multiplier="0.6" id="x7c-Nd-W1J"/>
                         </constraints>
                         <variation key="default">
@@ -1319,12 +1365,6 @@
                                 <exclude reference="b1d-DU-9N1"/>
                                 <exclude reference="oSh-6K-EvA"/>
                                 <exclude reference="slH-Gb-Qff"/>
-                                <exclude reference="4lh-hC-Adu"/>
-                                <exclude reference="ItC-Kj-34g"/>
-                                <exclude reference="MLN-vH-TTg"/>
-                                <exclude reference="NX7-aa-voP"/>
-                                <exclude reference="ln6-rG-fqg"/>
-                                <exclude reference="vri-ZS-RlD"/>
                                 <exclude reference="2Fu-CU-r8j"/>
                                 <exclude reference="AgK-4C-xnQ"/>
                                 <exclude reference="XG2-6R-dUJ"/>
@@ -1337,8 +1377,6 @@
                                 <include reference="QL8-n7-Zeh"/>
                                 <include reference="JfO-oF-OAb"/>
                                 <include reference="b1d-DU-9N1"/>
-                                <include reference="4lh-hC-Adu"/>
-                                <include reference="MLN-vH-TTg"/>
                                 <include reference="AgK-4C-xnQ"/>
                             </mask>
                         </variation>
@@ -1349,8 +1387,6 @@
                                 <include reference="h5x-51-udI"/>
                                 <include reference="1FY-OC-mWI"/>
                                 <include reference="ZUC-vA-cB9"/>
-                                <include reference="ItC-Kj-34g"/>
-                                <include reference="vri-ZS-RlD"/>
                                 <include reference="XG2-6R-dUJ"/>
                             </mask>
                         </variation>
@@ -1361,12 +1397,13 @@
                                 <include reference="x7c-Nd-W1J"/>
                                 <include reference="oSh-6K-EvA"/>
                                 <include reference="slH-Gb-Qff"/>
-                                <include reference="NX7-aa-voP"/>
-                                <include reference="ln6-rG-fqg"/>
                                 <include reference="2Fu-CU-r8j"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="runningTotalLabel" destination="OoW-1e-xKa" id="afh-6W-j7t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
