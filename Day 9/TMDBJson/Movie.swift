@@ -61,19 +61,19 @@ class Movie {
             self.release_date = release_date
             print(release_date)
         } else {
-            print("release_date effed up")
+            print("release_date")
         }
         if let genre_ids = dict["genre_ids"] as? [Int] {
             self.genre_ids = genre_ids
             print(genre_ids)
         } else {
-            print("no dice on the genre_ids")
+            print("genre_ids")
         }
         if let id = dict["id"] as? Int {
             self.id = id
             print(id)
         } else {
-            print("fix ur id bruh")
+            print("fix your id bruh")
         }
         if let original_language = dict["original_language"] as? String {
             self.original_language = original_language

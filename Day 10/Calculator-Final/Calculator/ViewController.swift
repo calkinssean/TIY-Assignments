@@ -32,6 +32,7 @@ import UIKit
                 value1 = 0
                 updateUI()
                 hasPerformedCalculation = false
+                hasTypedNumber = false
                 return
             }
             if isFirstTap == true {
@@ -40,12 +41,14 @@ import UIKit
                 value1 = 0
                 isFirstTap = false
                 updateUI()
+                hasTypedNumber = false
                 return
             } else {
                 calculate()
                 operatorString = "+"
                 value1 = 0
                 updateUI()
+                hasTypedNumber = false
                 return
             }
             
@@ -65,6 +68,7 @@ import UIKit
                 updateUI()
                 hasPerformedCalculation = false
                 print(value1, runningTotal)
+                hasTypedNumber = false
                 return
             }
             if isFirstTap == true {
@@ -74,6 +78,7 @@ import UIKit
                 isFirstTap = false
                 updateUI()
                 print(value1, runningTotal)
+                hasTypedNumber = false
                 return
             }
             else if hasTypedNumber == true {
@@ -82,6 +87,7 @@ import UIKit
                 value1 = 0
                 updateUI()
                 print(value1, runningTotal)
+                hasTypedNumber = false
                 return
             }
             
@@ -95,6 +101,7 @@ import UIKit
                 updateUI()
                 hasPerformedCalculation = false
                 print(value1, runningTotal)
+                hasTypedNumber = false
                 return
             }
             if isFirstTap == true {
@@ -104,6 +111,7 @@ import UIKit
                 isFirstTap = false
                 updateUI()
                 print(value1, runningTotal)
+                hasTypedNumber = false
                 return
             }
             else if hasTypedNumber == true {
@@ -112,6 +120,7 @@ import UIKit
                 value1 = 0
                 updateUI()
                 print(value1, runningTotal)
+                hasTypedNumber = false
                 return
             }
         }
@@ -126,6 +135,7 @@ import UIKit
                 value1 = 0
                 updateUI()
                 hasPerformedCalculation = false
+                hasTypedNumber = false
                 return
             }
             if isFirstTap == true {
@@ -134,12 +144,14 @@ import UIKit
                 value1 = 0
                 updateUI()
                 isFirstTap = false
+                hasTypedNumber = false
                 return
             } else {
                 calculate()
                 operatorString = "-"
                 value1 = 0
                 updateUI()
+                hasTypedNumber = false
                 return
             }
             
@@ -169,12 +181,15 @@ import UIKit
         }
         
         @IBAction func sqrtButton(sender: BorderButton) {
-            calculate()
-            value1 = 0
-            operatorString = "sqrt"
-            print(value1, runningTotal)
-            calculate()
-            updateUI()
+            if hasTypedNumber == true {
+                calculate()
+                value1 = 0
+                operatorString = "sqrt"
+                print(value1, runningTotal)
+                calculate()
+                hasTypedNumber = false
+                updateUI()
+            }
             
         
         }
@@ -184,13 +199,15 @@ import UIKit
             value1 = 0
             updateUI()
             hasPerformedCalculation = true
+            hasTypedNumber = false
             print(value1, runningTotal)
         }
         
         @IBAction func percentButton(sender: UIButton) {
             if hasPerformedCalculation == false {
-            value1 = value1 / 100
+            runningTotal = value1 / 100
             value1 = 0
+            hasTypedNumber = false
             print(value1, runningTotal)
             return
         }
@@ -206,13 +223,14 @@ import UIKit
                 value1 = 0
                 print(value1, runningTotal)
                 updateUI()
-                return
+            hasTypedNumber = false
+            return
             } else {
             runningTotal = runningTotal * -1
             value1 = 0
             updateUI()
             print(value1, runningTotal)
-            
+            hasTypedNumber = false
         }
         }
         

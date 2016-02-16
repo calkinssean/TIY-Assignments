@@ -10,6 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var hero: Hero?
+    @IBOutlet weak var HeroNameLabel: UILabel!
+    @IBOutlet weak var HomePlanetLabel: UILabel!
+    @IBOutlet weak var HeroPowerLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HeroNameLabel.text = hero?.name
@@ -17,19 +24,15 @@ class DetailViewController: UIViewController {
         self.HeroPowerLabel.text = hero?.powers
         self.imageView.image = UIImage(named: "\(hero!.imageName)")
         
-  //      self.imageView.image = UIImage(named: "TIYLogo")
+        //      self.imageView.image = UIImage(named: "TIYLogo")
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var HeroNameLabel: UILabel!
-    @IBOutlet weak var HomePlanetLabel: UILabel!
-    @IBOutlet weak var HeroPowerLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
     
     
 }
