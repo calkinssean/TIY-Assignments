@@ -9,18 +9,34 @@
 import UIKit
 
 class RCGTableViewCell: UITableViewCell {
+    
 
     
+    
+    
     @IBAction func garretButton(sender: UIButton) {
-        let number1 = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        let number2 = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        let number3 = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        let color = UIColor(red: CGFloat(number1), green: CGFloat(number2), blue: CGFloat(number3), alpha: 1.0)
+        let redColorValue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let greenColorValue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let blueColorValue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let color = UIColor(red: CGFloat(redColorValue), green: CGFloat(greenColorValue), blue: CGFloat(blueColorValue), alpha: 1.0)
         self.backgroundColor = color
+        print(redColorValue)
+        
+        Config.sharedInstance.redColorValue = Float(redColorValue)
+        Config.sharedInstance.greenColorValue = Float(greenColorValue)
+        Config.sharedInstance.blueColorValue = Float(blueColorValue)
+        Config.sharedInstance.alphaColorValue = 0.0
+        
+        Config.sharedInstance.saveConfiguration()
+    
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    func saveDefaults() {
+        
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

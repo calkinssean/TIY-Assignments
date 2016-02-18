@@ -19,6 +19,8 @@
 		14FE6EE21C73E84000C5ED96 /* ColorChangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE6EE11C73E84000C5ED96 /* ColorChangeTableViewCell.swift */; };
 		14FE6EE41C73E91500C5ED96 /* RCGTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE6EE31C73E91500C5ED96 /* RCGTableViewCell.swift */; };
 		14FE6EE61C73F72600C5ED96 /* adrip1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14FE6EE51C73F72600C5ED96 /* adrip1.ttf */; };
+		14FE6EE81C74D88500C5ED96 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE6EE71C74D88500C5ED96 /* Config.swift */; };
+		14FE6F0A1C7518AC00C5ED96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FE6F091C7518AC00C5ED96 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		14FE6EE11C73E84000C5ED96 /* ColorChangeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChangeTableViewCell.swift; sourceTree = "<group>"; };
 		14FE6EE31C73E91500C5ED96 /* RCGTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCGTableViewCell.swift; sourceTree = "<group>"; };
 		14FE6EE51C73F72600C5ED96 /* adrip1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = adrip1.ttf; path = ../adrip1.ttf; sourceTree = "<group>"; };
+		14FE6EE71C74D88500C5ED96 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = ../Config.swift; sourceTree = "<group>"; };
+		14FE6F091C7518AC00C5ED96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FE6F0A1C7518AC00C5ED96 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,7 @@
 		14FE6EB81C73CC5500C5ED96 = {
 			isa = PBXGroup;
 			children = (
+				14FE6F091C7518AC00C5ED96 /* MapKit.framework */,
 				14FE6EC31C73CC5500C5ED96 /* missingCar */,
 				14FE6EC21C73CC5500C5ED96 /* Products */,
 			);
@@ -71,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				14FE6EC41C73CC5500C5ED96 /* AppDelegate.swift */,
+				14FE6EE71C74D88500C5ED96 /* Config.swift */,
 				14FE6EC61C73CC5500C5ED96 /* ProfileViewController.swift */,
 				14FE6EC81C73CC5500C5ED96 /* FindCarViewController.swift */,
 				14FE6ED81C73CD0900C5ED96 /* SettingsTableViewController.swift */,
@@ -121,6 +128,11 @@
 				TargetAttributes = {
 					14FE6EC01C73CC5500C5ED96 = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -166,6 +178,7 @@
 				14FE6ED91C73CD0900C5ED96 /* SettingsTableViewController.swift in Sources */,
 				14FE6EC91C73CC5500C5ED96 /* FindCarViewController.swift in Sources */,
 				14FE6EE21C73E84000C5ED96 /* ColorChangeTableViewCell.swift in Sources */,
+				14FE6EE81C74D88500C5ED96 /* Config.swift in Sources */,
 				14FE6EC51C73CC5500C5ED96 /* AppDelegate.swift in Sources */,
 				14FE6EE41C73E91500C5ED96 /* RCGTableViewCell.swift in Sources */,
 				14FE6EC71C73CC5500C5ED96 /* ProfileViewController.swift in Sources */,
@@ -316,6 +329,7 @@
 				14FE6ED71C73CC5500C5ED96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

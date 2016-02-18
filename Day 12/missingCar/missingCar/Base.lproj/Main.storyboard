@@ -19,7 +19,6 @@
             <string>adrippingmarker</string>
             <string>adrippingmarker</string>
             <string>adrippingmarker</string>
-            <string>adrippingmarker</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -49,21 +48,15 @@
                                                     </connections>
                                                 </slider>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bc7-7G-oNU">
-                                                    <rect key="frame" x="-2" y="40" width="364" height="31"/>
+                                                    <rect key="frame" x="-2" y="60" width="364" height="31"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="iUw-VG-Ala" eventType="valueChanged" id="zOg-ej-Cfg"/>
                                                     </connections>
                                                 </slider>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ELL-dg-ghd">
-                                                    <rect key="frame" x="-2" y="80" width="364" height="31"/>
-                                                    <connections>
-                                                        <action selector="valueChanged:" destination="iUw-VG-Ala" eventType="valueChanged" id="BJs-jB-3x2"/>
-                                                    </connections>
-                                                </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jct-bh-aVd">
                                                     <rect key="frame" x="-2" y="120" width="364" height="31"/>
                                                     <connections>
-                                                        <action selector="valueChanged:" destination="iUw-VG-Ala" eventType="valueChanged" id="kSl-xD-YyU"/>
+                                                        <action selector="valueChanged:" destination="iUw-VG-Ala" eventType="valueChanged" id="BJs-jB-3x2"/>
                                                     </connections>
                                                 </slider>
                                             </subviews>
@@ -78,21 +71,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-JY-wy0">
-                                                    <rect key="frame" x="0.0" y="34" width="210" height="34"/>
+                                                    <rect key="frame" x="0.0" y="51" width="210" height="34"/>
                                                     <fontDescription key="fontDescription" name="adrippingmarker" family="a dripping marker" pointSize="27"/>
                                                     <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vI-xx-td5">
-                                                    <rect key="frame" x="0.0" y="68" width="210" height="34"/>
-                                                    <fontDescription key="fontDescription" name="adrippingmarker" family="a dripping marker" pointSize="27"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDS-bt-FuS">
                                                     <rect key="frame" x="0.0" y="102" width="210" height="34"/>
                                                     <fontDescription key="fontDescription" name="adrippingmarker" family="a dripping marker" pointSize="27"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -122,7 +109,6 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="alphaSlider" destination="jct-bh-aVd" id="Tk2-Ph-s1q"/>
                                     <outlet property="blueSlider" destination="ELL-dg-ghd" id="jBA-jd-NeS"/>
                                     <outlet property="greenSlider" destination="bc7-7G-oNU" id="Nb9-df-1fn"/>
                                     <outlet property="redSlider" destination="ifz-Ay-gFh" id="irn-Au-tuJ"/>
@@ -309,29 +295,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Otw-Qp-90k">
+                                <rect key="frame" x="20" y="20" width="560" height="531"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGA-R0-oXe">
+                                <rect key="frame" x="434" y="521" width="146" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="LETS GO TO HAWAII!"/>
+                                <connections>
+                                    <action selector="goToHawaii:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="rzp-GA-XLf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeJ-sJ-3vl">
+                                <rect key="frame" x="279" y="501" width="42" height="42"/>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="currentLocation:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="LWS-el-RFk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="EeJ-sJ-3vl" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5mY-2Y-olf"/>
+                            <constraint firstItem="Otw-Qp-90k" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="75k-4E-2w9"/>
+                            <constraint firstItem="Otw-Qp-90k" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Bwf-Ld-Cbd"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="EeJ-sJ-3vl" secondAttribute="bottom" constant="8" id="J7C-8a-dgj"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Otw-Qp-90k" secondAttribute="bottom" id="K8W-C9-JkL"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="JGA-R0-oXe" secondAttribute="bottom" id="Me8-Sd-yFc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JGA-R0-oXe" secondAttribute="trailing" id="VYS-yT-cYo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Otw-Qp-90k" secondAttribute="trailing" id="ZOz-2F-dpJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Car" image="findCar" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="Otw-Qp-90k" id="9ZX-9e-Mdl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,5 +361,6 @@
         <image name="cloudTools" width="21" height="17"/>
         <image name="findCar" width="21" height="19"/>
         <image name="garretFace" width="150" height="150"/>
+        <image name="location" width="42" height="42"/>
     </resources>
 </document>

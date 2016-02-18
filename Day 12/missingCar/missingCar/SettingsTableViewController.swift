@@ -20,6 +20,11 @@ class SettingsTableViewController: UITableViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
     
         
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
