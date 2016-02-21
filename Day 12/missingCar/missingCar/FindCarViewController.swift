@@ -11,10 +11,12 @@ import CoreLocation
 import MapKit
 
 class FindCarViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-    
+    var locationManager = CLLocationManager()
+    var newLatitude = 21.282778
+    var newLongitude = 157.829444
+
     @IBAction func currentLocation(sender: UIButton) {
-        
-        locationManager.delegate = self
+                locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -22,8 +24,8 @@ class FindCarViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     }
     @IBOutlet weak var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
-    var locationManager = CLLocationManager()
-    var initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+
+    var initialLocation = CLLocation(latitude: 21.282778, longitude: 157.82944)
     @IBAction func goToHawaii(sender: UIButton) {
         
         centerMapOnLocation(initialLocation)

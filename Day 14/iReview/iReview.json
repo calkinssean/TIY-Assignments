@@ -1,0 +1,301 @@
+{
+    "restaurants": [
+                    
+                    {
+                    "name": "Olive Garden",
+                    "description": "Olive Garden is an American casual dining restaurant chain specializing in Italian-American cuisine. It is a subsidiary of Darden Restaurants, Inc., which is headquartered in unincorporated Orange County, Florida, near Orlando.",
+                    "image": "oliveGarden",
+                    "location": "3515 Constitution Blvd, West Valley City, UT 84119",
+                    "latitude": 40.696257,
+                    "longitude": -111.957445,
+                    "menus": [{
+                              "menuName": "Olive Garden Menu",
+                              "dishes": [{
+                                         "name": "Chicken Scampi",
+                                         "description": "Bell peppers and red onions sautéed with chicken tenderloins in a creamy scampi sauce. Served over angel hair pasta.",
+                                         "rating": 0,
+                                         "image": "chickenScampi",
+                                         "price": 15.49
+                                         }, {
+                                         "name": "Chicken Parmigiana",
+                                         "description": "Two lightly fried parmesan-breaded chicken breasts are smothered with Olive Garden’s homemade marinara sauce and melted Italian cheeses. We serve our Chicken Parmigiana with a side of spaghetti for dinner. Try this classic pairing of Italian comfort foods that will leave you saying 'yum!'",
+                                         "rating": 0,
+                                         "image": "chickenParmigiana",
+                                         "price": 14.99
+                                         }, {
+                                         "name": "Fettuccine Alfredo",
+                                         "description": "The key to Olive Garden's rich and creamy alfredo sauce is its freshness. Our chefs make it in house throughout the day with parmesan cheese, heavy cream, and garlic. Served with fettuccine pasta, and even the pickiest eaters can agree this simple Fettuccine Alfredo meal is delightful!",
+                                         "rating": 0,
+                                         "image": "fettuccineAlfredo",
+                                         "price": 12.99
+                                         }, {
+                                         "name": "Cheese Ravioli",
+                                         "description": "Filled with a blend of indulgent Italian cheeses, topped with your choice of homemade marinara or meat sauce and melted mozarella.",
+                                         "rating": 0,
+                                         "image": "cheeseRavioli",
+                                         "price": 11.99
+                                         
+                                         }, {
+                                         "name": "Sicilian Cheesecake",
+                                         "description": "Our ricotta cheesecake features a shortbread cookie crust and is topped with raspberry drizzle and crumbled almond biscotti.",
+                                         "rating": 0,
+                                         "image": "cheeseCake",
+                                         "price": 6.49
+                                         }]
+                              }]
+                    
+                    }, {
+                    "name": "Arby's",
+                    "description": "The Arby's brand purpose is Inspiring Smiles Through Delicious Experiences™. Arby's delivers on its purpose by celebrating the art of Meatcraft™ with a variety of high-quality proteins and innovative, crave-able sides, such as Curly Fries and Jamocha shakes. Arby's Fast Crafted™ restaurant services feature a unique blend of quick-serve speed combined with the quality and made-for-you care of home.",
+                    "image": "arbys",
+                    "location": "Arby's, 3215 3500 South, West Valley City, UT 84119",
+                    "latitude": 40.696343,
+                    "longitude": -111.968040,
+                    "menus": [{
+                              "menuName": "Arby's Menu",
+                              "dishes": [{
+                                         "name": "Smokehouse Brisket",
+                                         "description": "We set out to make a sandwich with layers of smoky flavor, and this is the result. We smoke our brisket for at least 13 hours in a pit smoker in Texas. We top that with smoked gouda, crispy onions, mayo and BBQ sauce and serve it all on an artisan-style roll.",
+                                         "rating": 0,
+                                         "image": "arbysBrisket",
+                                         "price": 8.00
+                                         }, {
+                                         "name": "Angus Philly",
+                                         "description": "Layer Angus steak on a toasted Philly roll. Top it with fire-roasted onions and peppers, melted Swiss cheese and mayo. Open your mouth. Insert this Philly sandwich.",
+                                         "rating": 0,
+                                         "image": "angusPhilly",
+                                         "price": 6.49
+                                         }, {
+                                         "name": "Reuben",
+                                         "description": "Marbled rye bread filled with freshly sliced corned beef, melty Swiss Cheese, tangy sauerkraut and creamy Thousand Island dressing. This is a reuben sandwich inspired by the New York standard.",
+                                         "rating": 0,
+                                         "image": "reuben",
+                                         "price": 7.50
+                                         }, {
+                                         "name": "Crispy Fish Flatbread",
+                                         "description": "Stop waking up early just to go sit in a boat and leave empty handed. Arby's wild-caught Alaskan Pollock is crispy-fried to golden-brown perfection. We top it with tartar sauce and shredded lettuce and wrap it in a fluffy flatbread.​",
+                                         "rating": 0,
+                                         "image": "fishFlatbread",
+                                         "price": 5.97
+                                         }, {
+                                         "name": "Chicken Farmhouse Salad",
+                                         "description": "True, this is a salad. But don't give up on it yet. This salad is topped with meat! Not only is it piled high with crispy chicken, it has a layer of diced pepper bacon. It also comes with the usual salad stuff like chopped fresh lettuce, diced tomatoes and shredded cheddar cheese.",
+                                         "rating": 0,
+                                         "image": "farmhouseSalad",
+                                         "price": 8.99
+                                         }]
+                              }]
+                    
+                    }, {
+                    "name": "Cafe Silvestre",
+                    "description": "We're a family business in Salt Lake City, Utah. Our goal is to create the best authentic mexican food in SLC. Stop in and try something delicious!",
+                    "image": "cafeSilvestre",
+                    "location": "3524 2200 W, Salt Lake City, UT 84119",
+                    "latitude": 40.696111,
+                    "longitude": -111.948800,
+                    "menus": [{
+                              "menuName": "Cafe Silvestre Menu",
+                              "dishes": [{
+                                         "name": "Small Combination Platter",
+                                         "description": "Chorizo taco, cheese enchilada, bean and Chile Verde burrito and chorizo tostada.",
+                                         "rating": 0,
+                                         "image": "smallCombo",
+                                         "price": 9.75
+                                         }, {
+                                         "name": "Enchilada Platter",
+                                         "description": "Two enchiladas on corn tortillas with your choice of filling",
+                                         "rating": 0,
+                                         "image": "enchiPlatter",
+                                         "price": 9.25
+                                         }, {
+                                         "name": "Fajitas",
+                                         "description": "Chicken or Steak sautéed with onion, bell pepper and tomato. Served with two flour tortillas.",
+                                         "rating": 0,
+                                         "image": "fajitas",
+                                         "price": 10.25
+                                         }, {
+                                         "name": "Chile Platter",
+                                         "description": "Choose between our original Chile Verde or try our tasty red Chile Colorado served with two hand rolled flour tortillas",
+                                         "rating": 0,
+                                         "image": "chilePlatter",
+                                         "price": 9.25
+                                         }, {
+                                         "name": "Chimichanga Plate",
+                                         "description": "Your choice of beef or chicken and pepper jack cheese rolled in a flour tortilla and fried until crisp. Served with guacamole and sour cream",
+                                         "rating": 0,
+                                         "image": "chimiPlate",
+                                         "price": 9.75
+                                         }]
+                              }]
+                    
+                    }, {
+                    "name": "Applebee's",
+                    "description": "Founded nearly three decades ago on the principles of exceptional value and family fun, Applebee's Services, Inc., operates what is today the largest casual-dining chain in the world. This prominent eatery draws people of all ages and lifestyles with its fun, family-friendly atmosphere and signature bar and grill menu.",
+                    "image": "applebees",
+                    "location": "2175 City Center Ct, West Valley City, UT 84119",
+                    "latitude": 40.698969,
+                    "longitude": -111.947994,
+                    "menus": [{
+                              "menuName": "Applebees Menu",
+                              "dishes": [{
+                                         "name": "Hot Shot Whisky Chicken",
+                                         "description": "Whisky onion & mushroom, peppercorn, rosemary pan gravy, cheddar jalapeño-topped mashed potatoes.",
+                                         "rating": 3,
+                                         "image": "whiskyChicken",
+                                         "price": 9.99
+                                         }, {
+                                         "name": "7oz Sirlion with Stout Gravy",
+                                         "description": "7 oz. sirloin, grilled onion, roasted tomato, crispy red potatoes, stout gravy.",
+                                         "rating": 2,
+                                         "image": "grilledSirlion",
+                                         "price": 9.99
+                                         }, {
+                                         "name": "Savory Cedar Salmon",
+                                         "description": "A variety of spring vegetables sit atop steamed potatoes. Then it all meets rich, delicious salmon grilled with cedar seasoning, finished with a creamy white wine & lemon artichoke spread.",
+                                         "rating": 0,
+                                         "image": "cedarSalmon",
+                                         "price": 14.99
+                                         }, {
+                                         "name": "Shrimp Wonton Stir-Fry",
+                                         "description": "Stir-fry veggies, housemade dumpling sauce, wonton strips, white rice.",
+                                         "rating": 5,
+                                         "image": "shrimpStirFry",
+                                         "price": 9.99
+                                         }, {
+                                         "name": "The Blazin, Texan",
+                                         "description": "Seared in: onions & jalapeños. Piled on: shredded BBQ brisket, fresh jalapeños, white cheddar, signature grill sauce",
+                                         "rating": 1,
+                                         "image": "blazinTexan",
+                                         "price": 12.99
+                                         }]
+                              }]
+                    
+                    }, {
+                    "name": "Copper Bowl",
+                    "description": "Copper Bowl is a traditional, innovative Indian cuisine balance by an array of exotic spices. Copper Bowl offers a perfect blend of northern and southern dishes in an inviting atmosphere of modern elegance and sophistication.",
+                    "image": "copperBowl",
+                    "location": "214 West 600 South, Salt Lake City, UT 84101",
+                    "latitude": 40.756643,
+                    "longitude": -111.897172,
+                    "menus": [{
+                              "menuName": "Copper Bowl Menu",
+                              "dishes": [{
+                                         "name": "Laal Maas",
+                                         "description": "A Rajasthani lamb curry in a chile sauce.",
+                                         "rating": 0,
+                                         "image": "laalMaas",
+                                         "price": 16.95
+                                         }, {
+                                         "name": "Lamb Vindaloo",
+                                         "description": "Lamb slow cooked in a chile vinegar sauce.",
+                                         "rating": 0,
+                                         "image": "lambVindaloo",
+                                         "price": 15.95
+                                         }, {
+                                         "name": "Chicken Korma Masala",
+                                         "description": "Chicken cooked with onions in a creamy yogurt sauce.",
+                                         "rating": 0,
+                                         "image": "cKormaMasala",
+                                         "price": 14.95
+                                         }, {
+                                         "name": "Vegetable Pakora",
+                                         "description": "A mixed vegetable fritter with chickpea flour with carom seeds.",
+                                         "rating": 0,
+                                         "image": "vegPakora",
+                                         "price": 4.95
+                                         }, {
+                                         "name": "Avocado Bengali Jhalmuri",
+                                         "description": "Jhalmuri tossed with avocado, potatoes, tomatoes, onions and chutney.",
+                                         "rating": 0,
+                                         "image": "Jhalmuri",
+                                         "price": 7.95
+                                         }]
+                              }]
+                    
+                    }, {
+                    "name": "Costa Vida",
+                    "description": "Costa Vida was born on the beautiful beaches of coastal Mexico, inspired by the lifestyle that pushes you to catch the wave – rather than stand on the sidelines to let life pass you by. This coastal lifestyle encourages passionately pursuing what makes you happy and gaining satisfaction from doing things the right way. We believe fresh food created with passion, from scratch using real ingredients, just tastes better! We know the difference and our customers can taste the difference.",
+                    "image": "costaVida",
+                    "location": "3312 Decker Lake Dr, West Valley City, UT 84119",
+                    "latitude": 40.700072,
+                    "longitude": -111.948373,
+                    "menus": [{
+                              "menuName": "Costa Vida Menu",
+                              "dishes": [{
+                                         "name": "Burritos",
+                                         "description": "Stuffed with meat, cheese, rice, beans and sauce. Get it smothered with extra sauce and cheese for .99¢",
+                                         "rating": 0,
+                                         "image": "costaVidaBurrito",
+                                         "price": 9.99
+                                         }, {
+                                         "name": "Enchiladas",
+                                         "description": "Stuffed with meat, cheese and sauce. Served with cilantro lime rice and choice of beans.",
+                                         "rating": 0,
+                                         "image": "costaVidaEnchilada",
+                                         "price": 10.99
+                                         }, {
+                                         "name": "Quesadillas",
+                                         "description": "Filled with meat and cheese. Served with cilantro lime rice and choice of beans.",
+                                         "rating": 0,
+                                         "image": "costaVidaQuesadilla",
+                                         "price": 7.99
+                                         }, {
+                                         "name": "Tacos",
+                                         "description": "Filled with meat, cheese, lettuce, and pico de gallo. Served with cilantro lime rice and choice of beans.",
+                                         "rating": 0,
+                                         "image": "costaVidaTacos",
+                                         "price": 8.99
+                                         }, {
+                                         "name": "Salads",
+                                         "description": "Loaded with meat, rice, beans, lettuce, pico de gallo, guacamole, tortilla strips, cotija cheese and dressing.",
+                                         "rating": 0,
+                                         "image": "costaVidaSalads",
+                                         "price": 10.99
+                                         }]
+                              }]
+                    
+                    }, {
+                    "name": "Charlie Chow's",
+                    "description": "Charlie Chow's Dragon Grill has always been known for it's fine Asian cuisine served in an attractive, contemporary setting in the heart of downtown Salt Lake City. Be sure to sample our fresh, homemade Dim Sum (appertizer) in addition to the delicious entrees made to order and elegantly served. And don't forget to try the Dragon Gill, a tasty new way to create your own meal and sample a varitey of Asian flavors. Because all of our entrees are made fresh to order, we use no MSG in our cooking. Plus, our traditon of friendly service and great food have made Charlie Chow's Dragon Grill a long time Salt Lake favorite.",
+                    "image": "charChow",
+                    "location": "255 400 South, Salt Lake City, UT 84111",
+                    "latitude": 40.760967,
+                    "longitude": -111.883201,
+                    "menus": [{
+                              "menuName": "Charlie Chow's Menu",
+                              "dishes": [{
+                                         "name": "Lemon Sesame Shrimp",
+                                         "description": "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce.",
+                                         "rating": 0,
+                                         "image": "lemonSesameShrimp",
+                                         "price": 12.95
+                                         }, {
+                                         "name": "Pepper Shrimp/Scallops",
+                                         "description": "Peppery onions and peppers stir-fired in an oyster sauce with ground peppercorns.",
+                                         "rating": 0,
+                                         "image": "pepperSwimp",
+                                         "price": 12.95
+                                         }, {
+                                         "name": "Imperial Chicken",
+                                         "description": "Tangy, spicy and sweet all at once, this lightly battered chicken is served with red and green bell peppers and onions.",
+                                         "rating": 0,
+                                         "image": "imperialChicken",
+                                         "price": 10.55
+                                         }, {
+                                         "name": "Sesame Chicken",
+                                         "description": "Sweet and chewy, lightly battered and deep fried, this chicken dish is a pure delight!",
+                                         "rating": 0,
+                                         "image": "sesameChicken",
+                                         "price": 10.55
+                                         }, {
+                                         "name": "Szechuan Pork",
+                                         "description": "Marinated chicken stir-fried with bamboo shoots, water chestnuts, and black mushrooms.",
+                                         "rating": 0,
+                                         "image": "szechuanPork",
+                                         "price": 10.55
+                                         }]
+                              }]
+                    
+                    }
+                    ]
+}
