@@ -8,7 +8,7 @@
 
 import UIKit
 
-class menuTableViewCell: UITableViewCell {
+class MenuTableViewCell: UITableViewCell {
 
     var rating: Int = 0
     

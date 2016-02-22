@@ -31,6 +31,7 @@ class DishesDetailViewController: UIViewController {
         self.dishImageView.image = UIImage(named: "\(detailDish!.image)")
         super.viewDidAppear(animated)
         print(detailDish?.rating)
+
         
     }
 

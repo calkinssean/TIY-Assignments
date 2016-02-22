@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		143AF22F1C768D5E00659D0B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF22E1C768D5E00659D0B /* HomeScreenViewController.swift */; };
 		143AF2311C76A5BB00659D0B /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF2301C76A5BB00659D0B /* RestaurantTableViewCell.swift */; };
-		143AF2331C76CAF200659D0B /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF2321C76CAF200659D0B /* menuTableViewCell.swift */; };
+		143AF2331C76CAF200659D0B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF2321C76CAF200659D0B /* MenuTableViewCell.swift */; };
 		143AF2351C77B23000659D0B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF2341C77B23000659D0B /* MapKit.framework */; };
 		14FE6F1C1C762D8200C5ED96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE6F1B1C762D8200C5ED96 /* AppDelegate.swift */; };
 		14FE6F1E1C762D8200C5ED96 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE6F1D1C762D8200C5ED96 /* RestaurantTableViewController.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		143AF22E1C768D5E00659D0B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = ../HomeScreenViewController.swift; sourceTree = "<group>"; };
 		143AF2301C76A5BB00659D0B /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewCell.swift; path = ../RestaurantTableViewCell.swift; sourceTree = "<group>"; };
-		143AF2321C76CAF200659D0B /* menuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = menuTableViewCell.swift; path = ../menuTableViewCell.swift; sourceTree = "<group>"; };
+		143AF2321C76CAF200659D0B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = ../MenuTableViewCell.swift; sourceTree = "<group>"; };
 		143AF2341C77B23000659D0B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		14FE6F181C762D8200C5ED96 /* iReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FE6F1B1C762D8200C5ED96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +72,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143AF2581C7B8E0100659D0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14FE6F4B1C764A5000C5ED96 /* User.swift */,
+				14FE6F4D1C764A6600C5ED96 /* Restaurant.swift */,
+				14FE6F511C764B0100C5ED96 /* Menu.swift */,
+				14FE6F4F1C764A7500C5ED96 /* Dish.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		143AF2591C7B8E4300659D0B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14FE6F591C76745200C5ED96 /* LoginViewController.swift */,
+				143AF22E1C768D5E00659D0B /* HomeScreenViewController.swift */,
+				14FE6F5B1C76764600C5ED96 /* AboutPageViewController.swift */,
+				14FE6F1D1C762D8200C5ED96 /* RestaurantTableViewController.swift */,
+				14FE6F5D1C76771200C5ED96 /* RestaurantProfileViewController.swift */,
+				14FE6F5F1C7677CC00C5ED96 /* MapViewController.swift */,
+				14FE6F611C76789400C5ED96 /* MenuTableViewController.swift */,
+				14FE6F631C76795F00C5ED96 /* DishesDetailViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		143AF25A1C7B8E5400659D0B /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				143AF2301C76A5BB00659D0B /* RestaurantTableViewCell.swift */,
+				143AF2321C76CAF200659D0B /* MenuTableViewCell.swift */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		14FE6F0F1C762D8200C5ED96 = {
 			isa = PBXGroup;
 			children = (
@@ -95,20 +130,9 @@
 				14FE6F1B1C762D8200C5ED96 /* AppDelegate.swift */,
 				14FE6F691C76850200C5ED96 /* BorderButton.swift */,
 				14FE6F551C764EA700C5ED96 /* Config.swift */,
-				14FE6F4B1C764A5000C5ED96 /* User.swift */,
-				14FE6F4D1C764A6600C5ED96 /* Restaurant.swift */,
-				14FE6F511C764B0100C5ED96 /* Menu.swift */,
-				14FE6F4F1C764A7500C5ED96 /* Dish.swift */,
-				14FE6F591C76745200C5ED96 /* LoginViewController.swift */,
-				143AF22E1C768D5E00659D0B /* HomeScreenViewController.swift */,
-				14FE6F5B1C76764600C5ED96 /* AboutPageViewController.swift */,
-				14FE6F1D1C762D8200C5ED96 /* RestaurantTableViewController.swift */,
-				143AF2301C76A5BB00659D0B /* RestaurantTableViewCell.swift */,
-				14FE6F5D1C76771200C5ED96 /* RestaurantProfileViewController.swift */,
-				14FE6F5F1C7677CC00C5ED96 /* MapViewController.swift */,
-				14FE6F611C76789400C5ED96 /* MenuTableViewController.swift */,
-				143AF2321C76CAF200659D0B /* menuTableViewCell.swift */,
-				14FE6F631C76795F00C5ED96 /* DishesDetailViewController.swift */,
+				143AF2581C7B8E0100659D0B /* Models */,
+				143AF2591C7B8E4300659D0B /* View Controllers */,
+				143AF25A1C7B8E5400659D0B /* Table View Cells */,
 				14FE6F1F1C762D8200C5ED96 /* Main.storyboard */,
 				14FE6F221C762D8200C5ED96 /* Assets.xcassets */,
 				14FE6F241C762D8200C5ED96 /* LaunchScreen.storyboard */,
@@ -213,7 +237,7 @@
 				14FE6F1E1C762D8200C5ED96 /* RestaurantTableViewController.swift in Sources */,
 				14FE6F1C1C762D8200C5ED96 /* AppDelegate.swift in Sources */,
 				14FE6F4C1C764A5000C5ED96 /* User.swift in Sources */,
-				143AF2331C76CAF200659D0B /* menuTableViewCell.swift in Sources */,
+				143AF2331C76CAF200659D0B /* MenuTableViewCell.swift in Sources */,
 				143AF22F1C768D5E00659D0B /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
