@@ -23,11 +23,11 @@ class RestaurantTableViewController: UIViewController, UITableViewDataSource, UI
         
         let restaurant = self.restaurantArray[indexPath.row]
         
-            let cell = tableView.dequeueReusableCellWithIdentifier("restaurantCell", forIndexPath: indexPath) as! RestaurantTableViewCell
-            cell.restaurantNameLabel.text = restaurant.name
-            cell.restaurantAdressLabel.text = restaurant.location
-            cell.restaurantImage.image = UIImage(named: (restaurant.imageName))
-            return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("restaurantCell", forIndexPath: indexPath) as! RestaurantTableViewCell
+        cell.restaurantNameLabel.text = restaurant.name
+        cell.restaurantAdressLabel.text = restaurant.location
+        cell.restaurantImage.image = UIImage(named: (restaurant.imageName))
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -45,7 +45,7 @@ class RestaurantTableViewController: UIViewController, UITableViewDataSource, UI
             
         }
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -93,9 +93,9 @@ class RestaurantTableViewController: UIViewController, UITableViewDataSource, UI
         }
         return(returnString, data)
     }
-
-
-
+    
+    
+    
 }
 
 

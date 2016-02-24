@@ -43,7 +43,7 @@ performSegueWithIdentifier("showDishesDetailSegue", sender: self)
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let currentDish = self.dishesArray[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell") as! menuTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell") as! MenuTableViewCell
         cell.dishNameLabel.text = currentDish.name
         cell.dishPriceLabel.text = "$\(currentDish.price)"
         cell.imageView?.image = UIImage(named: (currentDish.image))

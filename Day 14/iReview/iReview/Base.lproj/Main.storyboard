@@ -584,7 +584,7 @@
                                         <rect key="frame" x="16" y="0.0" width="16" height="22"/>
                                         <state key="normal" image="unselectedStar"/>
                                         <state key="selected" image="star"/>
-                                        <state key="focused" image="9204AE8F-6D4F-42F1-B9E2-BFA879AC6A4A"/>
+                                        <state key="focused" image="79479948-B850-4D9D-BE93-054A6A29C60A"/>
                                         <connections>
                                             <action selector="starTapped:" destination="tXI-Vw-Ggy" eventType="touchUpInside" id="RsM-MZ-p4d"/>
                                         </connections>
@@ -713,7 +713,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9204AE8F-6D4F-42F1-B9E2-BFA879AC6A4A" width="16" height="16">
+        <image name="79479948-B850-4D9D-BE93-054A6A29C60A" width="16" height="16">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
