@@ -35,6 +35,8 @@ class Friend {
     var following: Int = 0
     var created_at: String = ""
     var updated_at: String = ""
+    init() {
+    }
     
     init(dict: JSONDictionary) {
         

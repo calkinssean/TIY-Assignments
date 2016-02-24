@@ -16,6 +16,7 @@
 		143AF2CA1C7D530600659D0B /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF2C91C7D530600659D0B /* APIController.swift */; };
 		143AF2CC1C7D57B200659D0B /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF2CB1C7D57B200659D0B /* FriendTableViewCell.swift */; };
 		143AF2D01C7D620C00659D0B /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143AF2CF1C7D620C00659D0B /* FriendTableViewController.swift */; };
+		14B210AC1C7E350600AB911E /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B210AB1C7E350600AB911E /* FriendDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		143AF2C91C7D530600659D0B /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIController.swift; path = ../APIController.swift; sourceTree = "<group>"; };
 		143AF2CB1C7D57B200659D0B /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendTableViewCell.swift; path = ../FriendTableViewCell.swift; sourceTree = "<group>"; };
 		143AF2CF1C7D620C00659D0B /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendTableViewController.swift; path = ../FriendTableViewController.swift; sourceTree = "<group>"; };
+		14B210AB1C7E350600AB911E /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendDetailViewController.swift; path = ../FriendDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				143AF2C91C7D530600659D0B /* APIController.swift */,
 				143AF2C31C7D4E0B00659D0B /* Config.swift */,
 				143AF2CF1C7D620C00659D0B /* FriendTableViewController.swift */,
+				14B210AB1C7E350600AB911E /* FriendDetailViewController.swift */,
 				143AF2CB1C7D57B200659D0B /* FriendTableViewCell.swift */,
 				143AF2B51C7D4B1B00659D0B /* Main.storyboard */,
 				143AF2B81C7D4B1B00659D0B /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				143AF2C81C7D4F0E00659D0B /* Friend.swift in Sources */,
 				143AF2D01C7D620C00659D0B /* FriendTableViewController.swift in Sources */,
 				143AF2CA1C7D530600659D0B /* APIController.swift in Sources */,
+				14B210AC1C7E350600AB911E /* FriendDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

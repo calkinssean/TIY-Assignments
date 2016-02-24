@@ -8,49 +8,72 @@
 
 import UIKit
 protocol GithubFriendsProtocol {
-    func passFriend(friend: Friend)
+    func passFriendsArray(friendsArray: [Friend])
 }
 class FriendTableViewController: UITableViewController, GithubFriendsProtocol {
     
-    var friendsArray = [Friend]()
+    var tableViewFriendArray = [Friend]()
     
     var apiClient: APIController?
     
-    var currentFriend: Friend?
+    var currentFriend = Friend()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.apiClient = APIController(delegate: self)
         self.apiClient?.searchForUser("calkinssean")
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "FriendCell")
-        print(friendsArray.count)
-        for friend in friendsArray {
+        print(tableViewFriendArray.count)
+        for friend in tableViewFriendArray {
             print("printing friends in friendsArray")
             print(friend.name)
         }
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let friend = friendsArray[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell", forIndexPath: indexPath)
-        cell.textLabel?.text = friend.name
-        print(friend.name)
+        let currentFriend = tableViewFriendArray[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell", forIndexPath: indexPath) as! FriendTableViewCell
+        cell.friendNameLabel.text = currentFriend.name
+        cell.friendLoginLabel.text = currentFriend.login
+        
+        print(currentFriend.name)
         return cell
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(friendsArray.count)
-        return friendsArray.count
+        print(tableViewFriendArray.count)
+        return tableViewFriendArray.count
     }
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.currentFriend = friendsArray[indexPath.row]
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.currentFriend = tableViewFriendArray[indexPath.row]
         performSegueWithIdentifier("showDetailViewSegue", sender: self)
+        print(currentFriend.name)
     }
-    func passFriend(friend: Friend) {
-        debugPrint("pass friend called from view controller")
-        self.friendsArray.append(friend)
-        print(friend.name)
-        print(friendsArray.count)
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetailViewSegue" {
+                let detailViewController = segue.destinationViewController as! FriendDetailViewController
+                detailViewController.detailFriend = self.currentFriend
+            print(currentFriend.name)
+        }
+    }
+    
+    
+    func passFriendsArray(friendsArray: [Friend]) {
+        
+        
+        self.tableViewFriendArray = friendsArray
+
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         self.tableView.reloadData()
+        })
+        
+        debugPrint("pass friend called from view controller")
+                print(tableViewFriendArray.count)
+        
     }
 }
 
