@@ -67,11 +67,8 @@
 				14B210E91C7E84A800AB911E /* Config.swift */,
 				14B210D71C7E816E00AB911E /* AppDelegate.swift */,
 				14B210EF1C7E883400AB911E /* Models */,
-				14B210EB1C7E879200AB911E /* MovieAPI.swift */,
-				14C23C971C7EB0180072A99C /* MovieTableViewCell.swift */,
-				14B210D91C7E816E00AB911E /* MovieViewController.swift */,
+				14C23C9B1C7ED1D70072A99C /* View Controllers */,
 				14B210DB1C7E816E00AB911E /* Main.storyboard */,
-				14C23C991C7EC6120072A99C /* DetailViewController.swift */,
 				14B210DE1C7E816E00AB911E /* Assets.xcassets */,
 				14B210E01C7E816E00AB911E /* LaunchScreen.storyboard */,
 				14B210E31C7E816E00AB911E /* Info.plist */,
@@ -82,9 +79,20 @@
 		14B210EF1C7E883400AB911E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14B210EB1C7E879200AB911E /* MovieAPI.swift */,
+				14C23C971C7EB0180072A99C /* MovieTableViewCell.swift */,
 				14B210ED1C7E882A00AB911E /* Movie.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		14C23C9B1C7ED1D70072A99C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14B210D91C7E816E00AB911E /* MovieViewController.swift */,
+				14C23C991C7EC6120072A99C /* DetailViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
