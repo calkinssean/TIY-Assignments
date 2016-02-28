@@ -584,7 +584,7 @@
                                         <rect key="frame" x="16" y="0.0" width="16" height="22"/>
                                         <state key="normal" image="unselectedStar"/>
                                         <state key="selected" image="star"/>
-                                        <state key="focused" image="79479948-B850-4D9D-BE93-054A6A29C60A"/>
+                                        <state key="focused" image="2778F9B6-CFFD-4C7C-9CD2-8AB0275020F1"/>
                                         <connections>
                                             <action selector="starTapped:" destination="tXI-Vw-Ggy" eventType="touchUpInside" id="RsM-MZ-p4d"/>
                                         </connections>
@@ -713,7 +713,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="79479948-B850-4D9D-BE93-054A6A29C60A" width="16" height="16">
+        <image name="2778F9B6-CFFD-4C7C-9CD2-8AB0275020F1" width="16" height="16">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -739,7 +739,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4BAAADAAAAAQAQAAABAQADAAAAAQAQ
 AAABAgADAAAABAAABLYBAwADAAAAAQABAAABBgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQAB
 AAABFQADAAAAAQAEAAABFgADAAAAAQAQAAABFwAEAAAAAQAABAABHAADAAAAAQABAAABUgADAAAAAQAC
 AAABUwADAAAABAAABL6HcwAHAAAMSAAABMYAAAAAAAgACAAIAAgAAQABAAEAAQAADEhMaW5vAhAAAG1u
-dHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBzUkdCAAAAAAAAAAAAAAAAAAD21gAB
+dHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBzUkdCAAAAAAAAAAAAAAABAAD21gAB
 AAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWNw
 cnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQAAAHwAAAAFGJrcHQAAAIEAAAAFHJYWVoAAAIYAAAAFGdY
 WVoAAAIsAAAAFGJYWVoAAAJAAAAAFGRtbmQAAAJUAAAAcGRtZGQAAALEAAAAiHZ1ZWQAAANMAAAAhnZp

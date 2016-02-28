@@ -1,9 +1,9 @@
 //
 //  Config.swift
-//  MoviesApp2
+//  WeatherOrNot
 //
-//  Created by Sean Calkins on 2/24/16.
-//  Copyright © 2016 Sean Calkins. All rights reserved.
+//  Created by Sean Calkins on 2/25/16.
+//  Copyright © 2016 Dape App Productions LLC. All rights reserved.
 //
 
 import Foundation

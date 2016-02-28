@@ -10,17 +10,17 @@ import Foundation
 
 class Movie {
     var poster_path: String = ""
-    var overview: String?
-    var release_date: String?
-    var genre_ids: [Int]?
-    var movieId: Int?
-    var original_title: String?
-    var original_language: String?
-    var title: String?
-    var backdrop_path: String?
-    var popularity: Double?
-    var vote_count: Int?
-    var vote_average: Double?
+    var overview: String = ""
+    var release_date: String = ""
+    var genre_ids: [Int] = []
+    var movieId: Int = 0
+    var original_title: String = ""
+    var original_language: String = ""
+    var title: String = ""
+    var backdrop_path: String = ""
+    var popularity: Double = 0
+    var vote_count: Int = 0
+    var vote_average: Double = 0
     
     init() {
     }

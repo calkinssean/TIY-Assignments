@@ -32,7 +32,7 @@ class MovieAPI {
                             if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
                                 if let results = dict["results"] as? JSONArray {
                                     for result in results {
-                                        let m = Movie(dict: result as! JSONDictionary)
+                                        let m = Movie(dict: result)
                                         self.moviesArray.append(m)
                                     }
                                     self.delegate?.passMovies(self.moviesArray)
