@@ -35,10 +35,6 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func citySearchButtonTapped(sender: UIButton) {
         self.apiClient?.getGoogleMapsAPI(citySearchTextField.text!)
     }
-    @IBAction func weatherSearched(sender: UIButton) {
-        
-        self.apiClient?.getWeatherJSON("\(self.lat),\(self.lng)")
-    }
     
     //MARK: - TableView Functions
     
@@ -77,11 +73,12 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
     //MARK: - Delgegate Functions
     
     func passGoogleAPICity(address: String, lat: Double, lng: Double) {
-        dispatch_async(dispatch_get_main_queue(), {
+       
             self.address = address
             self.lat = lat
             self.lng = lng
-        })
+            self.apiClient?.getWeatherJSON("\(self.lat),\(self.lng)")
+      
     }
     func passWeatherArray(c: City) {
         
