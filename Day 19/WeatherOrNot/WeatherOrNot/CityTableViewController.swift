@@ -34,6 +34,7 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     @IBAction func citySearchButtonTapped(sender: UIButton) {
         self.apiClient?.getGoogleMapsAPI(citySearchTextField.text!)
+        citySearchTextField.text = ""
     }
     
     //MARK: - TableView Functions
