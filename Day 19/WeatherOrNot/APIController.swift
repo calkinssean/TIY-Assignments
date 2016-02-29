@@ -56,7 +56,7 @@ class APIController {
                                             }
                                         }
                                     }
-                                    self.delegate?.passGoogleAPICity(addressString, lat: lat, lng: lng)
+                                    self.delegate?.passGoogleAPIInfo(addressString, lat: lat, lng: lng)
                                 }
                             }
                         } catch {
@@ -98,7 +98,7 @@ class APIController {
                                         }
                                         if let city = self.currentCity {
                                             print(city.weatherArray.count)
-                                            self.delegate?.passWeatherArray(city)
+                                            self.delegate?.passCity(city)
                                         }
                                     }
                                     

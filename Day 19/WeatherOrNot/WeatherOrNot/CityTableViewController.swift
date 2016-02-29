@@ -72,7 +72,7 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     //MARK: - Delgegate Functions
     
-    func passGoogleAPICity(address: String, lat: Double, lng: Double) {
+    func passGoogleAPIInfo(address: String, lat: Double, lng: Double) {
        
             self.address = address
             self.lat = lat
@@ -80,7 +80,7 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
             self.apiClient?.getWeatherJSON("\(self.lat),\(self.lng)")
       
     }
-    func passWeatherArray(c: City) {
+    func passCity(c: City) {
         
         dispatch_async(dispatch_get_main_queue(), {
             self.protocolCity = c

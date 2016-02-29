@@ -9,7 +9,7 @@
 
 protocol WeatherAppProtocol {
     
-    func passWeatherArray(c: City)
-    func passGoogleAPICity(address: String, lat: Double, lng: Double)
+    func passCity(c: City)
+    func passGoogleAPIInfo(address: String, lat: Double, lng: Double)
 
 }
