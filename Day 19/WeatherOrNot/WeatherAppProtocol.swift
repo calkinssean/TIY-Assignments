@@ -8,10 +8,8 @@
 
 
 protocol WeatherAppProtocol {
-    func passWeatherArray(weatherArray: [Weather], c: City)
-    func passGoogleAPICity(c: City)
+    
+    func passWeatherArray(c: City)
+    func passGoogleAPICity(address: String, lat: Double, lng: Double)
 
 }
-
-
-import Foundation

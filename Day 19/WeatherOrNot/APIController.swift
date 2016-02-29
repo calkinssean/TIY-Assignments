@@ -10,7 +10,7 @@ import Foundation
 
 class APIController {
     
-    var weatherArray = [Weather]()
+//     var weatherArray = [Weather]()
     var currentWeather: Weather?
     var currentCity: City?
     var googleAPICity = City()
@@ -18,7 +18,7 @@ class APIController {
     init(delegate: CityTableViewController) {
         self.delegate = delegate
     }
-// MARK: - Google Maps API Call
+    // MARK: - Google Maps API Call
     func getGoogleMapsAPI(zipcode: String) {
         let urlString = "http://maps.googleapis.com/maps/api/geocode/json?&components=postal_code:\(zipcode)&sensor=false"
         if let url = NSURL(string: urlString) {
@@ -32,15 +32,31 @@ class APIController {
                         do {
                             if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
                                 if let results = dict["results"] as? JSONArray {
+                                    var lat: Double = 0.0
+                                    var lng: Double = 0.0
+                                    var addressString: String = ""
                                     for result in results {
-                                        print(result)
                                         if let address = result["formatted_address"] as? String {
-                                            print(address)
-                                            self.googleAPICity.formatted_address = address
-                                            print(self.googleAPICity.formatted_address)
-                                            self.delegate?.passGoogleAPICity(self.googleAPICity)
+                                            addressString = address
+                                        } else {
+                                            print("couldn't get address")
+                                        }
+                                        if let geometry = result["geometry"] as? JSONDictionary {
+                                            if let location = geometry["location"] as? JSONDictionary {
+                                                if let latitude = location["lat"] as? Double {
+                                                    lat = latitude
+                                                } else {
+                                                    print("couldn't parse latitude")
+                                                }
+                                                if let longitude = location["lng"] as? Double {
+                                                    lng = longitude
+                                                } else {
+                                                    print("couldn't parse longitude")
+                                                }
+                                            }
                                         }
                                     }
+                                    self.delegate?.passGoogleAPICity(addressString, lat: lat, lng: lng)
                                 }
                             }
                         } catch {
@@ -54,10 +70,10 @@ class APIController {
         }
     }
     // MARK: - Forecast.IO API call
-
     
     func getWeatherJSON(location: String) {
         let urlString = "https://api.forecast.io/forecast/e3c2770e962780345933e7efd9028f02/\(location)"
+        print(urlString)
         if let url = NSURL(string: urlString) {
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithURL(url, completionHandler: {
@@ -77,10 +93,13 @@ class APIController {
                                     if let data = dictDaily["data"] as? JSONArray {
                                         for result in data {
                                             let w = Weather(dict: result)
-                                            self.weatherArray.append(w)
-                                            //                                            print(self.weatherArray.count)
+                                            self.currentCity?.weatherArray.append(w)
+                                            print(self.currentCity?.weatherArray.count)
                                         }
-                                        self.delegate?.passWeatherArray(self.weatherArray, c: (self.currentCity)!)
+                                        if let city = self.currentCity {
+                                            print(city.weatherArray.count)
+                                            self.delegate?.passWeatherArray(city)
+                                        }
                                     }
                                     
                                     
@@ -98,6 +117,6 @@ class APIController {
         } else {
             debugPrint("invalid url")
         }
-      
+        
     }
 }

@@ -37,10 +37,5 @@ class City {
         } else {
             print("couldn't parse icon")
         }
-//        if let formatted_address = dict["formatted_address"] as? String {
-//            self.formatted_address = formatted_address
-//        } else {
-//            print("couldn't parse formatted_address")
-//        }
     }
 }
