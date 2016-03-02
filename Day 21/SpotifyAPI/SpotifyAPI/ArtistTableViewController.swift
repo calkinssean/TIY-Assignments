@@ -7,23 +7,43 @@
 //
 
 import UIKit
+import StarWars
 
-class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableViewDataSource, UITableViewDelegate {
+class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet weak var artistTableView: UITableView!
     var apiClient: SpotifyAPIController?
     var artists = [Artist]()
     var currentArtist = Artist()
+    
+    
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return StarWarsGLAnimator()
+    }
+    
+    
+    
+    @IBOutlet weak var artistTableView: UITableView!
+    @IBOutlet weak var artistSearchTextField: UITextField!
+    @IBAction func addArtistButtonTapped(sender: UIButton) {
+        apiClient?.getArtistJSON(artistSearchTextField.text!)
+        artistSearchTextField.text = ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         apiClient = SpotifyAPIController(delegate: self)
     }
     
-    @IBOutlet weak var artistSearchTextField: UITextField!
-    @IBAction func addArtistButtonTapped(sender: UIButton) {
-        apiClient?.getArtistJSON(artistSearchTextField.text!)
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == artistSearchTextField {
+            textField.resignFirstResponder()
+        }
+        return true
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let c = artists[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("artistCell") as! ArtistTableViewCell
@@ -42,15 +62,18 @@ class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableVi
         if segue.identifier == "showAlbumTableViewSegue" {
             let viewController = segue.destinationViewController as! AlbumTableViewController
             viewController.currentArtist = self.currentArtist
+            let destination = segue.destinationViewController
+            destination.transitioningDelegate = self
         }
     }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
     }
     func passArtist(artist: Artist) {
+        self.artists.insert(artist, atIndex: 0)
+        print(self.artists.count)
         dispatch_async(dispatch_get_main_queue(), {
-            self.artists.insert(artist, atIndex: 0)
-            print(self.artists.count)
             self.artistTableView.reloadData()
         })
     }

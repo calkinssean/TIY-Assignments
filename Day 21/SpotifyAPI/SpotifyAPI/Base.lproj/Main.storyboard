@@ -5,6 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Caviar_Dreams_Bold.ttf">
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Artist Table View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,8 +27,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-ZU-WUn">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="64" width="560" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="artistCell" rowHeight="100" id="GIW-mi-Lh0" customClass="ArtistTableViewCell" customModule="SpotifyAPI" customModuleProvider="target">
@@ -30,24 +39,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="527" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAR-j2-YtS">
-                                                    <rect key="frame" x="80" y="18" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4D0-3F-qFk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4D0-3F-qFk">
                                                     <rect key="frame" x="8" y="18" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="6Q7-NW-FCe"/>
                                                         <constraint firstAttribute="height" constant="64" id="v5f-qn-Wim"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAR-j2-YtS">
+                                                    <rect key="frame" x="80" y="18" width="439" height="22"/>
+                                                    <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="ZAR-j2-YtS" firstAttribute="leading" secondItem="4D0-3F-qFk" secondAttribute="trailing" constant="8" id="0Iv-AA-b4i"/>
                                                 <constraint firstItem="ZAR-j2-YtS" firstAttribute="centerY" secondItem="c5E-Oj-IwD" secondAttribute="centerY" id="40D-OX-fJk"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZAR-j2-YtS" secondAttribute="trailing" constant="8" id="6qu-Wt-evR"/>
                                                 <constraint firstItem="4D0-3F-qFk" firstAttribute="leading" secondItem="c5E-Oj-IwD" secondAttribute="leading" constant="8" id="EYa-wU-zgY"/>
                                                 <constraint firstItem="ZAR-j2-YtS" firstAttribute="top" secondItem="4D0-3F-qFk" secondAttribute="top" id="ccO-6Q-jfw"/>
                                                 <constraint firstItem="ZAR-j2-YtS" firstAttribute="leading" secondItem="c5E-Oj-IwD" secondAttribute="leading" constant="8" id="fZy-4z-uc0"/>
@@ -76,18 +85,21 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ytT-ZU-WUn" secondAttribute="trailing" id="3K4-Db-3gJ"/>
                             <constraint firstItem="ytT-ZU-WUn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Y26-ml-SwU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ytT-ZU-WUn" secondAttribute="bottom" id="YwC-7s-IjS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ytT-ZU-WUn" secondAttribute="bottom" constant="44" id="YwC-7s-IjS"/>
                             <constraint firstItem="ytT-ZU-WUn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mqU-oZ-57w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xcz-BM-udc">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="67Y-e6-FW6">
-                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="KMw-bD-xwY">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for your favorite Artist!" textAlignment="natural" minimumFontSize="17" id="KMw-bD-xwY">
                                 <rect key="frame" x="20" y="7" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZUp-TZ-Yto"/>
+                                </connections>
                             </textField>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="lJ8-IA-IDj">
@@ -104,7 +116,7 @@
                     <connections>
                         <outlet property="artistSearchTextField" destination="KMw-bD-xwY" id="XSh-lg-sdP"/>
                         <outlet property="artistTableView" destination="ytT-ZU-WUn" id="Q6W-zc-MUM"/>
-                        <segue destination="MCQ-Q6-78i" kind="show" identifier="showAlbumTableViewSegue" id="rcz-G0-QIt"/>
+                        <segue destination="MCQ-Q6-78i" kind="presentation" identifier="showAlbumTableViewSegue" id="rcz-G0-QIt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,24 +138,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-aG-zgy">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="80" id="HZd-GV-dDi" customClass="AlbumTableViewCell" customModule="SpotifyAPI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="80"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HZd-GV-dDi" id="35v-qA-Dje">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jr9-qC-WTG">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jr9-qC-WTG">
                                                     <rect key="frame" x="8" y="8" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="HaJ-z2-3e8"/>
                                                         <constraint firstAttribute="height" constant="64" id="pyI-AC-CsH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-pH-UzK">
-                                                    <rect key="frame" x="80" y="8" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-pH-UzK">
+                                                    <rect key="frame" x="80" y="8" width="472" height="22"/>
+                                                    <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -152,6 +165,7 @@
                                                 <constraint firstItem="HsE-pH-UzK" firstAttribute="top" secondItem="jr9-qC-WTG" secondAttribute="top" id="PeI-P2-JRO"/>
                                                 <constraint firstItem="jr9-qC-WTG" firstAttribute="leading" secondItem="35v-qA-Dje" secondAttribute="leading" constant="8" id="QfL-IH-thr"/>
                                                 <constraint firstItem="jr9-qC-WTG" firstAttribute="centerY" secondItem="35v-qA-Dje" secondAttribute="centerY" id="S6y-wb-lKe"/>
+                                                <constraint firstAttribute="trailing" secondItem="HsE-pH-UzK" secondAttribute="trailing" constant="8" id="T0d-Bs-lCm"/>
                                                 <constraint firstItem="HsE-pH-UzK" firstAttribute="leading" secondItem="jr9-qC-WTG" secondAttribute="trailing" constant="8" id="wUX-Tp-KlP"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -166,14 +180,31 @@
                                     <outlet property="delegate" destination="MCQ-Q6-78i" id="X8Q-a9-ndi"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpo-nL-KlK">
+                                <rect key="frame" x="538" y="20" width="42" height="42"/>
+                                <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="viewDismissTapped:" destination="MCQ-Q6-78i" eventType="touchUpInside" id="eaX-sq-wkp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gpo-nL-KlK" secondAttribute="trailing" id="1C3-Dh-W2m"/>
                             <constraint firstItem="aHh-aG-zgy" firstAttribute="leading" secondItem="nhh-qQ-LQg" secondAttribute="leadingMargin" id="3B8-mZ-cYz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aHh-aG-zgy" secondAttribute="trailing" id="64O-Y6-9Wy"/>
                             <constraint firstItem="POf-hV-B2q" firstAttribute="top" secondItem="aHh-aG-zgy" secondAttribute="bottom" id="BRH-6c-SfP"/>
-                            <constraint firstItem="aHh-aG-zgy" firstAttribute="top" secondItem="u35-nd-BZ5" secondAttribute="bottom" id="D5X-A4-CTy"/>
+                            <constraint firstItem="aHh-aG-zgy" firstAttribute="top" secondItem="u35-nd-BZ5" secondAttribute="bottom" constant="44" id="D5X-A4-CTy"/>
+                            <constraint firstItem="gpo-nL-KlK" firstAttribute="top" secondItem="u35-nd-BZ5" secondAttribute="bottom" constant="8" id="fx3-Pb-JS4"/>
+                            <constraint firstAttribute="trailing" secondItem="gpo-nL-KlK" secondAttribute="trailing" constant="8" id="i84-Ru-CmN"/>
+                            <constraint firstItem="gpo-nL-KlK" firstAttribute="top" secondItem="u35-nd-BZ5" secondAttribute="bottom" id="u9f-lG-uTF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fx3-Pb-JS4"/>
+                                <exclude reference="i84-Ru-CmN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="albumTableView" destination="aHh-aG-zgy" id="8rc-2J-bZM"/>
@@ -196,9 +227,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qga-7S-BBl">
+                                <rect key="frame" x="538" y="20" width="42" height="42"/>
+                                <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="viewDismissTapped:" destination="od2-N9-XgH" eventType="touchUpInside" id="uOP-iQ-CJl"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FNb-zw-BWY">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" id="SN7-L7-CJ4" customClass="SongTableViewCell" customModule="SpotifyAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SN7-L7-CJ4" id="A8a-2o-0ie">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="353-fi-ZpB">
+                                                    <rect key="frame" x="8" y="11" width="46" height="22"/>
+                                                    <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="353-fi-ZpB" firstAttribute="leading" secondItem="A8a-2o-0ie" secondAttribute="leading" constant="8" id="Qju-cb-5px"/>
+                                                <constraint firstItem="353-fi-ZpB" firstAttribute="centerY" secondItem="A8a-2o-0ie" secondAttribute="centerY" id="tZk-dW-X4r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="songNameLabel" destination="353-fi-ZpB" id="FTL-Wu-Nnq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="od2-N9-XgH" id="1J4-vP-wU9"/>
@@ -210,7 +274,9 @@
                         <constraints>
                             <constraint firstItem="cmi-ky-i2x" firstAttribute="top" secondItem="FNb-zw-BWY" secondAttribute="bottom" id="2Cr-IU-UG7"/>
                             <constraint firstItem="FNb-zw-BWY" firstAttribute="leading" secondItem="SEj-d4-eTi" secondAttribute="leadingMargin" id="2jN-kg-2dA"/>
-                            <constraint firstItem="FNb-zw-BWY" firstAttribute="top" secondItem="QKf-v7-hbE" secondAttribute="bottom" id="8RY-XO-4FX"/>
+                            <constraint firstItem="qga-7S-BBl" firstAttribute="top" secondItem="QKf-v7-hbE" secondAttribute="bottom" id="6mu-hB-qhc"/>
+                            <constraint firstItem="FNb-zw-BWY" firstAttribute="top" secondItem="QKf-v7-hbE" secondAttribute="bottom" constant="44" id="8RY-XO-4FX"/>
+                            <constraint firstItem="qga-7S-BBl" firstAttribute="trailing" secondItem="SEj-d4-eTi" secondAttribute="trailingMargin" id="OrG-l0-bAd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FNb-zw-BWY" secondAttribute="trailing" id="xwj-b3-oqA"/>
                         </constraints>
                     </view>
@@ -243,5 +309,6 @@
     </scenes>
     <resources>
         <image name="addMusic" width="42" height="42"/>
+        <image name="x" width="42" height="42"/>
     </resources>
 </document>

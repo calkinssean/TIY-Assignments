@@ -10,6 +10,7 @@ import UIKit
 
 class SongTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SpotifyAPIProtocol2 {
     
+   
     @IBOutlet weak var songTableView: UITableView!
     var apiClient: SpotifyAPIController?
     var currentAlbum = Album()
@@ -22,11 +23,14 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
         navigationItem.title = "\(currentAlbum.title)"
         
     }
+    @IBAction func viewDismissTapped(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let c = currentAlbum.songs[indexPath.row]
-        let cell  = UITableViewCell()
-        cell.textLabel?.text = c.name
+        let cell = tableView.dequeueReusableCellWithIdentifier("songCell") as! SongTableViewCell
+        cell.songNameLabel.text = c.name
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,13 +39,13 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
 
   
     func passSongs(songs: [Song]) {
-        dispatch_async(dispatch_get_main_queue(), {
         self.currentAlbum.songs = songs
         print(self.currentAlbum.songs.count)
+        for song in self.currentAlbum.songs {
+            print(song.name)
+        }
+        dispatch_async(dispatch_get_main_queue(), {
         self.songTableView.reloadData()
-            for song in self.currentAlbum.songs {
-                print(song.name)
-            }
         })
    
 }

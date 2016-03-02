@@ -1,0 +1,10 @@
+PODS:
+  - StarWars (1.0)
+
+DEPENDENCIES:
+  - StarWars (~> 1.0)
+
+SPEC CHECKSUMS:
+  StarWars: 01f1731789f738f64c6a9533c209213aaf465014
+
+COCOAPODS: 0.39.0

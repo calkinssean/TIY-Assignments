@@ -19,17 +19,28 @@ class AlbumTableViewCell: UITableViewCell {
     func loadImageFromURL(urlString: String) {
         
         if urlString.isEmpty == false {
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                if let url = NSURL(string: urlString) {
-                    if let data = NSData(contentsOfURL: url) {
-                        self.albumImageView.image = UIImage(data: data)
+            if let url = NSURL(string: urlString) {
+                let session = NSURLSession.sharedSession()
+                let task = session.dataTaskWithURL(url, completionHandler: {
+                    (data, response, error) in
+                    if error != nil {
+                        debugPrint("An error occurred \(error)")
+                        return
                     }
-                }
-            })
+                    let theFinalImage = UIImage(data: data!)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.albumImageView.image = theFinalImage
+                    })
+                })
+                task.resume()
+                
+            } else {
+                print("Not a valid url")
+            }
         } else {
             debugPrint("Invalid \(urlString)")
         }
     }
-
 }
+
+

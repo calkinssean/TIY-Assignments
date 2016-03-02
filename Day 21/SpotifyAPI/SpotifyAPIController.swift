@@ -15,7 +15,7 @@ class SpotifyAPIController {
     init(delegate: SongTableViewController) {
         self.songDelegate = delegate
     }
-  
+    
     init(delegate: ArtistTableViewController) {
         self.delegate = delegate
     }
@@ -25,35 +25,41 @@ class SpotifyAPIController {
     //MARK: - Artist API Call
     
     func getArtistJSON(artistName: String) {
-        let urlString = "https://api.spotify.com/v1/search?q=\(artistName)&type=artist"
-        if let url = NSURL(string: urlString) {
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithURL(url, completionHandler: {
-                
-                (data, response, error) in
-                if error != nil {
-                    debugPrint("there was an error \(error)")
-                } else {
-                    if let data = data {
-                        do {
-                            if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
-                                if let results = dict["artists"] as? JSONDictionary {
-                                    if let items = results["items"] as? JSONArray {
-                                        let itemDict = items.first!
-                                        self.currentArtist = Artist(dict: itemDict)
-                                        self.getAlbumAPI(self.currentArtist.idString)
+        
+        let spotifyArtistSearched = artistName.stringByReplacingOccurrencesOfString(" ", withString: "+", options: .CaseInsensitiveSearch, range: nil)
+        
+        if let escapedSearchTerm = spotifyArtistSearched.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet()) {
+            
+            let urlString = "https://api.spotify.com/v1/search?q=\(escapedSearchTerm)&type=artist"
+            if let url = NSURL(string: urlString) {
+                let session = NSURLSession.sharedSession()
+                let task = session.dataTaskWithURL(url, completionHandler: {
+                    
+                    (data, response, error) in
+                    if error != nil {
+                        debugPrint("there was an error \(error)")
+                    } else {
+                        if let data = data {
+                            do {
+                                if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
+                                    if let results = dict["artists"] as? JSONDictionary {
+                                        if let items = results["items"] as? JSONArray {
+                                            if let itemDict = items.first {
+                                                self.currentArtist = Artist(dict: itemDict)
+                                                self.getAlbumAPI(self.currentArtist.idString)
+                                            }
+                                        }
                                     }
                                 }
+                            } catch {
+                                print("couldn't parse dictionary")
                             }
-                        } catch {
-                            print("couldn't parse dictionary")
                         }
                     }
-                }
-            })
-            task.resume()
+                })
+                task.resume()
+            }
         }
-        
     }
     
     //MARK: - Get Album API
@@ -108,7 +114,6 @@ class SpotifyAPIController {
                                     for item in items {
                                         let s = Song(dict: item)
                                         songs.append(s)
-                                        
                                     }
                                     self.songDelegate!.passSongs(songs)
                                 }
@@ -122,6 +127,5 @@ class SpotifyAPIController {
             task.resume()
         }
     }
-    
     
 }

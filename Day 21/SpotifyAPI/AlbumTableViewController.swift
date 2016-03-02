@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import StarWars
 
-class AlbumTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AlbumTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var albumTableView: UITableView!
     
@@ -19,6 +20,14 @@ class AlbumTableViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidAppear(true)
         navigationItem.title = "\(currentArtist.name)"
         print(currentArtist.albums.count)
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return StarWarsGLAnimator()
+    }
+    
+    @IBAction func viewDismissTapped(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let c = currentArtist.albums[indexPath.row]
@@ -38,6 +47,8 @@ class AlbumTableViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "showSongTableViewSegue" {
             let viewController = segue.destinationViewController as! SongTableViewController
             viewController.currentAlbum = self.currentAlbum
+            let destination = segue.destinationViewController
+            destination.transitioningDelegate = self
         }
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
