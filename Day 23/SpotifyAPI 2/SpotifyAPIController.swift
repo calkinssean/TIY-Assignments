@@ -47,14 +47,14 @@ class SpotifyAPIController {
                                             if let itemDict = items.first {
                                                 self.currentArtist = Artist(dict: itemDict)
                                                 self.getAlbumAPI(self.currentArtist.idString)
-                                                self.artistArray.insert(self.currentArtist, atIndex: 0)
-                                                DataStore.sharedInstance.artistsArray.insert(self.currentArtist, atIndex: 0)
+//                                                self.artistArray.insert(self.currentArtist, atIndex: 0)
+//                                                DataStore.sharedInstance.artistsArray.insert(self.currentArtist, atIndex: 0)
                                                 self.delegate?.passArtist(self.currentArtist)
-                                                if DataStore.sharedInstance.saveArtists() {
-                                                    print("I saved it in api controller")
-                                                } else {
-                                                    print("I couldn't save it in api controller")
-                                                }
+//                                                if DataStore.sharedInstance.saveArtists() {
+//                                                    print("I saved it in api controller")
+//                                                } else {
+//                                                    print("I couldn't save it in api controller")
+//                                                }
                                                 
                                                 
                                             }

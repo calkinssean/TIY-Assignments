@@ -56,6 +56,9 @@ class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableVi
         return artists.count
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        DataStore.sharedInstance.artistsArray = self.artists
+        DataStore.sharedInstance.saveArtists()
+
         currentArtist = artists[indexPath.row]
         performSegueWithIdentifier("showAlbumTableViewSegue", sender: self)
     }
