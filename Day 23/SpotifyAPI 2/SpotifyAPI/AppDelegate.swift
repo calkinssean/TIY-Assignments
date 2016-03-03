@@ -12,28 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    var api = SpotifyAPIController()
-    
+
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         if DataStore.sharedInstance.loadArtists() {
-            print("Artists Loaded")
+            print("I loaded the artists in app delegate")
         } else {
-            print("Could not load Artists")
-//            api.getArtistJSON("artist name")
+            print("I didn't load the artists in app delegate")
         }
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
-        if DataStore.sharedInstance.saveChanges() {
-            print("all artists were saved")
-        } else {
-            print("couldn't save artists")
-        }
+     
+        DataStore.sharedInstance.saveArtists()
     }
-
+    
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.

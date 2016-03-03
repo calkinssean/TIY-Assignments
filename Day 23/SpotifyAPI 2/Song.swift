@@ -20,7 +20,7 @@ class Song: NSObject, NSCoding {
         if let name = dict["name"] as? String {
             self.name = name
         } else {
-            print("there was an issue with the name")
+            print("there was an issue with the song name")
         }
     }
     

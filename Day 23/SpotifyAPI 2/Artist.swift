@@ -29,19 +29,19 @@ class Artist: NSObject, NSCoding {
         if let idString  = dict["id"] as? String {
             self.idString  = idString
         } else {
-            print("couldn't parse id")
+            print("couldn't parse artist id")
         }
         if let name = dict["name"] as? String {
             self.name = name
         } else {
-            print("couldn't parse name")
+            print("couldn't parse artist name")
         }
         if let items = dict["images"] as? JSONArray {
             for item in items {
                 if let imageUrl = item["url"] as? String {
                     self.imageUrls.append(imageUrl)
                 } else {
-                    print("error with image url")
+                    print("error with artist image url")
                 }
             }
             print(imageUrls.count)

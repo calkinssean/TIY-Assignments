@@ -12,8 +12,9 @@ import StarWars
 class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
     
     var apiClient: SpotifyAPIController?
-    var currentArtist = Artist()
     var artists = [Artist]()
+    var currentArtist = Artist()
+    
     
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -24,17 +25,15 @@ class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableVi
     
     @IBOutlet weak var artistTableView: UITableView!
     @IBOutlet weak var artistSearchTextField: UITextField!
-    
     @IBAction func addArtistButtonTapped(sender: UIButton) {
         apiClient?.getArtistJSON(artistSearchTextField.text!)
         artistSearchTextField.text = ""
-        self.artistTableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiClient = SpotifyAPIController(songDelegate: self)
-        DataStore.sharedInstance.countOfArtists()
+        apiClient = SpotifyAPIController(delegate: self)
+        self.artists = DataStore.sharedInstance.artistsArray
     }
     
     
@@ -57,7 +56,7 @@ class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableVi
         return artists.count
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        currentArtist = DataStore.sharedInstance.artistArray[indexPath.row]
+        currentArtist = artists[indexPath.row]
         performSegueWithIdentifier("showAlbumTableViewSegue", sender: self)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -74,7 +73,6 @@ class ArtistTableViewController: UIViewController, SpotifyAPIProtocol, UITableVi
     }
     func passArtist(artist: Artist) {
         self.artists.insert(artist, atIndex: 0)
-        print(self.artists.count)
         dispatch_async(dispatch_get_main_queue(), {
             self.artistTableView.reloadData()
         })

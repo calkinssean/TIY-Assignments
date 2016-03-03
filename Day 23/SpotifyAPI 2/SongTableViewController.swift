@@ -8,18 +8,15 @@
 
 import UIKit
 
-class SongTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SpotifyAPIProtocol2 {
+class SongTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-   
+    
     @IBOutlet weak var songTableView: UITableView!
-//    var apiClient: SpotifyAPIController?
     var currentAlbum = Album()
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         print(currentAlbum.idString)
-//        apiClient = SpotifyAPIController(delegate: self)
-//        apiClient?.getSongAPI(currentAlbum.idString)
         navigationItem.title = "\(currentAlbum.title)"
         
     }
@@ -36,17 +33,6 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentAlbum.songs.count
     }
+    
+}
 
-  
-    func passSongs(songs: [Song]) {
-        self.currentAlbum.songs = songs
-        print(self.currentAlbum.songs.count)
-        for song in self.currentAlbum.songs {
-            print(song.name)
-        }
-        dispatch_async(dispatch_get_main_queue(), {
-        self.songTableView.reloadData()
-        })
-   
-}
-}

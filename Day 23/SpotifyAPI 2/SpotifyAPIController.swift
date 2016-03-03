@@ -8,13 +8,9 @@
 
 import Foundation
 
-class SpotifyAPIController: NSObject {
+class SpotifyAPIController {
     
     var delegate: SpotifyAPIProtocol?
-    var songDelegate: SpotifyAPIProtocol2?
-    init(delegate: SongTableViewController) {
-        self.songDelegate = delegate
-    }
     
     init(delegate: ArtistTableViewController) {
         self.delegate = delegate
@@ -24,7 +20,6 @@ class SpotifyAPIController: NSObject {
     var artistArray = [Artist]()
     var currentAlbum = Album()
     var currentSong = Song()
-    
     
     
     //MARK: - Artist API Call
@@ -51,9 +46,17 @@ class SpotifyAPIController: NSObject {
                                         if let items = results["items"] as? JSONArray {
                                             if let itemDict = items.first {
                                                 self.currentArtist = Artist(dict: itemDict)
-                                                self.artistArray.insert(self.currentArtist, atIndex: 0)
                                                 self.getAlbumAPI(self.currentArtist.idString)
-                                                DataStore.sharedInstance.saveChanges()
+                                                self.artistArray.insert(self.currentArtist, atIndex: 0)
+                                                DataStore.sharedInstance.artistsArray.insert(self.currentArtist, atIndex: 0)
+                                                self.delegate?.passArtist(self.currentArtist)
+                                                if DataStore.sharedInstance.saveArtists() {
+                                                    print("I saved it in api controller")
+                                                } else {
+                                                    print("I couldn't save it in api controller")
+                                                }
+                                                
+                                                
                                             }
                                         }
                                     }
@@ -69,8 +72,6 @@ class SpotifyAPIController: NSObject {
         }
     }
     
-   
-    
     //MARK: - Get Album API
     
     func getAlbumAPI(artistIDString: String) {
@@ -85,18 +86,11 @@ class SpotifyAPIController: NSObject {
                         do {
                             if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
                                 if let items = dict["items"] as? JSONArray {
-//                                    var albums = [Album]()
                                     for item in items {
                                         let a = Album(dict: item)
-                                       
-                                            self.currentArtist.albums.append(a)
-                                            self.getSongAPI(a.idString)
-                                       
+                                        self.currentArtist.albums.append(a)
+                                        self.getSongAPI(a.idString)
                                     }
-                                     print(self.currentArtist.albums.count)
-//                                    self.currentArtist.albums = albums
-                                    
-                                    DataStore.sharedInstance.saveChanges()
                                 }
                             }
                         } catch {
@@ -123,23 +117,14 @@ class SpotifyAPIController: NSObject {
                         do {
                             if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
                                 if let items = dict["items"] as? JSONArray {
-                                    var songs = [Song]()
                                     for item in items {
                                         let s = Song(dict: item)
                                         for album in self.currentArtist.albums {
                                             if album.idString == albumIDString {
                                                 album.songs.append(s)
                                             }
-                                            print(album.songs.count)
                                         }
                                     }
-                                  
-                                    
-                                    
-                                    for a in self.artistArray {
-                                        
-                                    }
-                                    self.delegate?.passArtist(self.currentArtist)
                                 }
                             }
                         } catch {

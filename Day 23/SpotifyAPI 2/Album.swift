@@ -28,15 +28,15 @@ class Album: NSObject, NSCoding {
         
         if
             let title = dict["name"] as? String {
-            self.title = title
-            print(title)
+                self.title = title
+                print(title)
         } else {
-            print("couldn't parse title")
+            print("couldn't parse album title")
         }
         if let idString = dict["id"] as? String {
             self.idString = idString
         } else {
-            print("couldn't parse idString")
+            print("couldn't parse album idString")
         }
         if let items = dict["images"] as? JSONArray {
             for item in items {
@@ -44,12 +44,12 @@ class Album: NSObject, NSCoding {
                     self.imageUrls.append(imageUrl)
                     print(imageUrls.count)
                 } else {
-                    print("error with image url")
+                    print("error with album image url")
                 }
                 
             }
         }
-    
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
