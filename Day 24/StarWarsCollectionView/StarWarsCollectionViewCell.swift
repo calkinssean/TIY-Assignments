@@ -10,5 +10,6 @@ import UIKit
 
 class StarWarsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var createdLabel: UILabel!
     
 }

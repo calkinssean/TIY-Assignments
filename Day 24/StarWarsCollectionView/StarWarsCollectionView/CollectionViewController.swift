@@ -22,7 +22,7 @@ class CollectionViewController: UIViewController, StarWarsProtcol, UICollectionV
     
     override func viewDidLoad() {
     super.viewDidLoad()
-        dateFormatter.dateFormat = "yyyy-mm-ddTHH:mm:ss.SSSSSSZ"
+        dateFormatter.dateFormat = "yyyy-mm-dd'T'HH:mm:ss.SSSSSSZ"
         APIClient = APIController(delegate: self)
         APIClient?.characterAPI()
     }
@@ -40,6 +40,7 @@ class CollectionViewController: UIViewController, StarWarsProtcol, UICollectionV
         let c = characterArray[indexPath.row]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("starWarsCell", forIndexPath: indexPath) as! StarWarsCollectionViewCell
         cell.characterNameLabel.text = c.name
+        cell.createdLabel.text = c.created
         return cell
     }
     

@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R6t-2O-qyt">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ehX-0W-SWB">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="0.0" id="ehX-0W-SWB">
                                     <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -43,13 +43,22 @@
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCL-sA-5e7">
+                                                    <rect key="frame" x="8" y="136.5" width="184" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="eCL-sA-5e7" secondAttribute="trailing" constant="8" id="4WO-Nc-TFf"/>
                                             <constraint firstItem="6wn-Dm-lgm" firstAttribute="leading" secondItem="Sxg-hq-LI4" secondAttribute="leading" constant="8" id="PlE-id-pEQ"/>
+                                            <constraint firstItem="eCL-sA-5e7" firstAttribute="leading" secondItem="Sxg-hq-LI4" secondAttribute="leading" constant="8" id="UFb-DZ-osD"/>
                                             <constraint firstItem="ofZ-nP-Pn2" firstAttribute="height" secondItem="Sxg-hq-LI4" secondAttribute="height" multiplier="0.5" id="XyM-2b-Fj7"/>
+                                            <constraint firstItem="eCL-sA-5e7" firstAttribute="top" secondItem="6wn-Dm-lgm" secondAttribute="bottom" constant="8" id="ZjY-1n-bvF"/>
                                             <constraint firstItem="ofZ-nP-Pn2" firstAttribute="top" secondItem="Sxg-hq-LI4" secondAttribute="top" id="cWF-TP-A2i"/>
                                             <constraint firstItem="ofZ-nP-Pn2" firstAttribute="leading" secondItem="Sxg-hq-LI4" secondAttribute="leading" id="pyV-Nv-lOz"/>
                                             <constraint firstItem="ofZ-nP-Pn2" firstAttribute="width" secondItem="Sxg-hq-LI4" secondAttribute="width" multiplier="0.5" id="sY2-jf-A72"/>
@@ -57,6 +66,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="characterNameLabel" destination="6wn-Dm-lgm" id="Bam-qK-z29"/>
+                                            <outlet property="createdLabel" destination="eCL-sA-5e7" id="ax8-xU-EdQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -102,15 +112,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEn-K2-LpZ">
+                                <rect key="frame" x="8" y="140" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uc9-Sc-xrJ" firstAttribute="leading" secondItem="5Vm-DZ-vlw" secondAttribute="leading" constant="8" id="4qy-Ne-8GG"/>
+                            <constraint firstItem="eEn-K2-LpZ" firstAttribute="top" secondItem="uc9-Sc-xrJ" secondAttribute="bottom" constant="8" id="ETc-e9-bXw"/>
                             <constraint firstItem="uc9-Sc-xrJ" firstAttribute="top" secondItem="96g-9D-xVM" secondAttribute="bottom" constant="8" id="bww-bX-eU8"/>
+                            <constraint firstItem="eEn-K2-LpZ" firstAttribute="leading" secondItem="5Vm-DZ-vlw" secondAttribute="leading" constant="8" id="xDZ-ZV-gwD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="characterNameLabel" destination="uc9-Sc-xrJ" id="yVV-F3-OI2"/>
+                        <outlet property="createdLabel" destination="eEn-K2-LpZ" id="OMz-GP-sOh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2s-no-90E" userLabel="First Responder" sceneMemberID="firstResponder"/>
