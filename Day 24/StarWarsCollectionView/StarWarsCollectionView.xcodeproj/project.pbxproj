@@ -14,11 +14,15 @@
 		141735951C8911140022861D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141735931C8911140022861D /* LaunchScreen.storyboard */; };
 		1417359D1C8913C00022861D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417359C1C8913C00022861D /* DetailViewController.swift */; };
 		141735A01C89140B0022861D /* StarWarsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417359F1C89140B0022861D /* StarWarsCollectionViewCell.swift */; };
-		141735A31C89143A0022861D /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141735A21C89143A0022861D /* Characters.swift */; };
-		141735A51C89145B0022861D /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141735A41C89145B0022861D /* Vehicle.swift */; };
 		141735A81C8914AF0022861D /* APIContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141735A71C8914AF0022861D /* APIContoller.swift */; };
 		141735AB1C8919AD0022861D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141735AA1C8919AD0022861D /* Constants.swift */; };
 		141735AD1C892AF70022861D /* StarWarsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141735AC1C892AF70022861D /* StarWarsProtocol.swift */; };
+		141735FF1C8A5EA60022861D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 141735FD1C8A5EA60022861D /* DataModel.xcdatamodeld */; };
+		14A6BEAB1C8DE4590044946E /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6BEA81C8DE4590044946E /* Person+CoreDataProperties.swift */; };
+		14A6BEAC1C8DE4590044946E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6BEA91C8DE4590044946E /* Person.swift */; };
+		14A6BEB31C8DE4B50044946E /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6BEB11C8DE4B50044946E /* Vehicle+CoreDataProperties.swift */; };
+		14A6BEB41C8DE4B50044946E /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6BEB21C8DE4B50044946E /* Vehicle.swift */; };
+		14A6BEB61C8DE53D0044946E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A6BEB51C8DE53D0044946E /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +35,15 @@
 		141735961C8911140022861D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1417359C1C8913C00022861D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1417359F1C89140B0022861D /* StarWarsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		141735A21C89143A0022861D /* Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Characters.swift; path = ../Characters.swift; sourceTree = "<group>"; };
-		141735A41C89145B0022861D /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = ../Vehicle.swift; sourceTree = "<group>"; };
 		141735A71C8914AF0022861D /* APIContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIContoller.swift; path = ../APIContoller.swift; sourceTree = "<group>"; };
 		141735AA1C8919AD0022861D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		141735AC1C892AF70022861D /* StarWarsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarWarsProtocol.swift; path = ../StarWarsProtocol.swift; sourceTree = "<group>"; };
+		141735FE1C8A5EA60022861D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		14A6BEA81C8DE4590044946E /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "../Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		14A6BEA91C8DE4590044946E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../Person.swift; sourceTree = "<group>"; };
+		14A6BEB11C8DE4B50044946E /* Vehicle+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Vehicle+CoreDataProperties.swift"; path = "../Vehicle+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		14A6BEB21C8DE4B50044946E /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = ../Vehicle.swift; sourceTree = "<group>"; };
+		14A6BEB51C8DE53D0044946E /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = ../DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		1417357E1C8911140022861D = {
 			isa = PBXGroup;
 			children = (
+				141735FD1C8A5EA60022861D /* DataModel.xcdatamodeld */,
 				141735891C8911140022861D /* StarWarsCollectionView */,
 				141735881C8911140022861D /* Products */,
 			);
@@ -103,8 +112,10 @@
 		141735A61C8914950022861D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				141735A21C89143A0022861D /* Characters.swift */,
-				141735A41C89145B0022861D /* Vehicle.swift */,
+				14A6BEA81C8DE4590044946E /* Person+CoreDataProperties.swift */,
+				14A6BEA91C8DE4590044946E /* Person.swift */,
+				14A6BEB11C8DE4B50044946E /* Vehicle+CoreDataProperties.swift */,
+				14A6BEB21C8DE4B50044946E /* Vehicle.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -113,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				141735A71C8914AF0022861D /* APIContoller.swift */,
+				14A6BEB51C8DE53D0044946E /* DataController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -189,14 +201,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A6BEB41C8DE4B50044946E /* Vehicle.swift in Sources */,
 				1417359D1C8913C00022861D /* DetailViewController.swift in Sources */,
+				141735FF1C8A5EA60022861D /* DataModel.xcdatamodeld in Sources */,
 				1417358D1C8911140022861D /* CollectionViewController.swift in Sources */,
-				141735A51C89145B0022861D /* Vehicle.swift in Sources */,
 				141735A01C89140B0022861D /* StarWarsCollectionViewCell.swift in Sources */,
 				141735AD1C892AF70022861D /* StarWarsProtocol.swift in Sources */,
 				141735A81C8914AF0022861D /* APIContoller.swift in Sources */,
+				14A6BEB31C8DE4B50044946E /* Vehicle+CoreDataProperties.swift in Sources */,
+				14A6BEAB1C8DE4590044946E /* Person+CoreDataProperties.swift in Sources */,
 				1417358B1C8911140022861D /* AppDelegate.swift in Sources */,
-				141735A31C89143A0022861D /* Characters.swift in Sources */,
+				14A6BEAC1C8DE4590044946E /* Person.swift in Sources */,
+				14A6BEB61C8DE53D0044946E /* DataController.swift in Sources */,
 				141735AB1C8919AD0022861D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,8 +363,22 @@
 				1417359B1C8911140022861D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		141735FD1C8A5EA60022861D /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				141735FE1C8A5EA60022861D /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 141735FE1C8A5EA60022861D /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1417357F1C8911140022861D /* Project object */;
 }

@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         
         dateFormatter.dateFormat = "MMM-dd-yyyy"
         
-        var todayString = dateFormatter.stringFromDate(today)
+        let todayString = dateFormatter.stringFromDate(today)
         
         todayString.uppercaseString
         PresentTimeLabel.text = todayString

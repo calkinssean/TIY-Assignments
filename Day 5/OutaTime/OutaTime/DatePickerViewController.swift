@@ -25,17 +25,3 @@ class DatePickerViewController: UIViewController {
 
 
 }
-
-
-
-
-//var theDate = ""
-//@IBOutlet weak var datePicker: UIDatePicker!
-//
-//@IBAction func datePickerAction(sender: UIDatePicker) {
-//    let dateFormatter = NSDateFormatter()
-//    
-//    dateFormatter.dateFormat = "MMM dd, yyyy"
-//    theDate = dateFormatter.stringFromDate(datePicker.date)
-//    print(theDate.uppercaseString)
-//}

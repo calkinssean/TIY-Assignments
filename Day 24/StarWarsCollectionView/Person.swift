@@ -1,5 +1,5 @@
 //
-//  Vehicle.swift
+//  Person.swift
 //  StarWarsCollectionView
 //
 //  Created by Sean Calkins on 3/7/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Vehicle: NSManagedObject {
+class Person: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 
