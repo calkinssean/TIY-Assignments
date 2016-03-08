@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 class APIController {
     
     var delegate: StarWarsProtcol?
+    let dataController = DataController()
     init(delegate: CollectionViewController) {
         self.delegate = delegate
     }
@@ -32,9 +34,7 @@ class APIController {
                             if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
                                 if let results = dict["results"] as? JSONArray {
                                     for result in results {
-                                        let c = Character(dict: result)
-                                        self.characterArray.append(c)
-                                        self.delegate?.passCharacterArray(self.characterArray)
+                                        self.seedPerson(result)
                                     }
                                 }
                             }
@@ -62,9 +62,9 @@ class APIController {
                             if let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
                                 if let results = dict["results"] as? JSONArray {
                                     for result in results {
-                                        let v = Vehicle(dict: result)
-                                        print(v.name)
-                                        print(v.created)
+                                        //                                        let v = Vehicle(dict: result)
+                                        //                                        print(v.name)
+                                        //                                        print(v.created)
                                     }
                                 }
                                 
@@ -78,5 +78,64 @@ class APIController {
             task.resume()
         }
     }
+    func seedPerson(dict: JSONDictionary) {
+        
+        let mom = dataController.managedObjectContext
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("Person", inManagedObjectContext: mom) as! Person
+        let today = NSDate()
+        if let name = dict["name"] as? String {
+            entity.setValue(name, forKey: "name")
+            print(entity.name)
+        } else {
+            print("couldn't parse the name json")
+        }
+        if let gender = dict["gender"] as? String {
+            entity.setValue(gender, forKey: "gender")
+        } else {
+            print("couldn't parse gender json")
+        }
+        if let created = dict["created"] as? NSDate {
+            entity.setValue(created, forKey: "created")
+        } else {
+            print("error with created")
+        }
+//        let entityVehicle = NSEntityDescription.insertNewObjectForEntityForName("vehicle", inManagedObjectContext: mom) as! Vehicle
+//        
+//        entityVehicle.setValue("X-wing", forKey: "name")
+//        entityVehicle.setValue(today, forKey: "created")
+//        
+//        let vehicles = NSSet(object: entityVehicle)
+//        entity.setValue(vehicles, forKey: "vehicles")
+//        
+        do {
+            try mom.save()
+            
+        } catch {
+            fatalError("An error occured saving Person and Vehicle \(error)")
+        }
+        
+    }
+    func fetchPerson() {
+        let mom = dataController.managedObjectContext
+        let fetchPerson = NSFetchRequest(entityName: "Person")
+        do {
+            let persons = try mom.executeFetchRequest(fetchPerson) as! [Person]
+            for p in persons {
+                print(p.name)
+                print(p.created)
+                
+                //                if let vehicles = p.vehicles {
+                //                    let vehicle = Array(vehicles) as! [Vehicle]
+                //                    for v in vehicles {
+                //                        print(v.name)
+                //                    }
+                //                }
+                
+            }
+        } catch {
+            fatalError("I couldn't fetch the person \(error)")
+        }
+    }
+    
     
 }

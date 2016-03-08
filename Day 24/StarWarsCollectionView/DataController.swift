@@ -14,7 +14,7 @@ class DataController: NSObject {
     
     override  init() {
         
-        guard let modelURL = NSBundle.mainBundle().URLForResource("myDataModel", withExtension:"momd") else {
+        guard let modelURL = NSBundle.mainBundle().URLForResource("DataModel", withExtension:"momd") else {
             fatalError("Error loading model from bundle")
         }
         
@@ -28,7 +28,7 @@ class DataController: NSObject {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         let docURL = urls[urls.endIndex-1]
         
-        let storeURL = docURL.URLByAppendingPathComponent("myDataModel.sqlite")
+        let storeURL = docURL.URLByAppendingPathComponent("DataModel.sqlite")
         do {
             try psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
         } catch {

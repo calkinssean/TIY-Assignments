@@ -14,7 +14,7 @@ class CollectionViewController: UIViewController, StarWarsProtcol, UICollectionV
     
     var dateFormatter = NSDateFormatter()
     
-    var currentCharacter = Character()
+//    var currentCharacter = Character()
     var characterArray = [Character]()
     var vehicleArray = [Vehicle]()
    
@@ -30,7 +30,7 @@ class CollectionViewController: UIViewController, StarWarsProtcol, UICollectionV
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "detailViewSegue" {
             let controller = segue.destinationViewController as! DetailViewController
-            controller.currentCharacter = self.currentCharacter
+//            controller.currentCharacter = self.currentCharacter
         }
     }
     
@@ -39,8 +39,8 @@ class CollectionViewController: UIViewController, StarWarsProtcol, UICollectionV
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let c = characterArray[indexPath.row]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("starWarsCell", forIndexPath: indexPath) as! StarWarsCollectionViewCell
-        cell.characterNameLabel.text = c.name
-        cell.createdLabel.text = c.created
+//        cell.characterNameLabel.text = c.name
+//        cell.createdLabel.text = c.created
         return cell
     }
     
@@ -49,8 +49,8 @@ class CollectionViewController: UIViewController, StarWarsProtcol, UICollectionV
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.currentCharacter = characterArray[indexPath.row]
-        print(dateFormatter.dateFromString(currentCharacter.created))
+//        self.currentCharacter = characterArray[indexPath.row]
+//        print(dateFormatter.dateFromString(currentCharacter.created))
         performSegueWithIdentifier("detailViewSegue", sender: self)
         
     }

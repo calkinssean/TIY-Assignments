@@ -18,4 +18,5 @@ extension Vehicle {
     @NSManaged var created: NSDate?
     @NSManaged var pilot: NSSet?
 
+    
 }
