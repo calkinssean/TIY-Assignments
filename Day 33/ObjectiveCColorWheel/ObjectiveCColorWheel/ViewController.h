@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ISColorWheel.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ISColorWheelDelegate>
 
+@property (nonatomic, strong) ISColorWheel* colorWheel;
+@property (nonatomic, strong) UISlider* brightnessSlider;
+@property (nonatomic, strong) UIView* wellView;
 
 @end
 

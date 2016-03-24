@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SearchByDateViewController: UIViewController {
+class SearchByDateViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startDateTextField: UITextField!
@@ -26,5 +26,12 @@ class SearchByDateViewController: UIViewController {
     @IBAction func searchTapped(sender: BorderButton) {
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 
 }

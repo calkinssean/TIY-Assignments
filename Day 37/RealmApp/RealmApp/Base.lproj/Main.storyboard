@@ -86,6 +86,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jB2-lk-6XD">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Note Cell" id="BnD-aY-ErG">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BnD-aY-ErG" id="2dk-AU-yMm">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="r2A-75-ESt" id="Vhl-Ue-ntP"/>
                                     <outlet property="delegate" destination="r2A-75-ESt" id="7L4-xk-KNb"/>
@@ -94,6 +104,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="82a-lg-lUK">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="r2A-75-ESt" id="T1E-4R-H2z"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,6 +123,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="82a-lg-lUK" id="yFn-0A-lL9"/>
+                        <outlet property="tableView" destination="jB2-lk-6XD" id="AqL-HB-LcD"/>
                         <outlet property="textField" destination="jB2-lk-6XD" id="VzL-kh-Svj"/>
                     </connections>
                 </viewController>
@@ -335,7 +349,7 @@
                                     <action selector="saveTapped:" destination="lA3-kJ-XDW" eventType="touchUpInside" id="s4l-1j-Za8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTE-QO-DjE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTE-QO-DjE">
                                 <rect key="frame" x="228.5" y="329" width="144" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="tvs-hA-fpb"/>
@@ -368,9 +382,11 @@
                         <outlet property="confirmPasswordTextField" destination="PTE-QO-DjE" id="3Jk-Bt-LVM"/>
                         <outlet property="newPasswordTextField" destination="Dvb-ft-7il" id="4pW-nO-A0T"/>
                         <outlet property="usernameTextField" destination="XKh-l3-GHz" id="55J-UB-Z4E"/>
+                        <segue destination="V1V-ST-JjO" kind="unwind" identifier="unwindFromEditProfile" unwindAction="unwindSegue:" id="krY-Vc-zo3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZk-Vi-2ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="V1V-ST-JjO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1594" y="332"/>
         </scene>

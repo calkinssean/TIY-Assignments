@@ -10,40 +10,59 @@ import UIKit
 import RealmSwift
 
 class EditProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var newPasswordTextField: UITextField!
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     let realm = try! Realm()
     
-//    @IBAction func saveTapped(sender: UIButton) {
-//        let ac = UIAlertController(title: "Add", message: "Add a note", preferredStyle: .Alert)
-//        
-//        let saveAction = UIAlertAction(title: "Save", style: .Default) {
-//            (alertAction) -> Void in
-//            let date = NSDate()
-//            
-//            let n  = Note()
-//            
-//            n.createdAt = date
-//            
-//            n.user = self.currentUser
-//            
-//            if let textField = ac.textFields?.first,
-//                
-//                let name = textField.text {
-//                    
-//                    n.noteDescription = name
-//                    
-//    }
-
+    var currentUser = User()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    @IBAction func saveTapped(sender: UIButton) {
+        if usernameTextField.text != "" {
+            
+            if usernameTextField.text == currentUser.username {
+                
+                if newPasswordTextField.text! == confirmPasswordTextField.text! {
+                    
+                    try! realm.write {
+                        currentUser.password = newPasswordTextField.text!
+                        realm.add(currentUser, update: true)
+                    }
+                    performSegueWithIdentifier("unwindFromEditProfile", sender: self)
+                    
+                } else {
+                    presentAlert("Your passwords didn't match")
+                }
+            } else {
+                presentAlert("Incorrect Username")
+            }
+        } else {
+            presentAlert("Please enter your username")
+        }
+    }
+    
+    func presentAlert(alertMessage: String) {
+        
+        let alertController = UIAlertController(title: "Oops", message: "\(alertMessage)", preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+        
+        self.usernameTextField.text = ""
+        self.newPasswordTextField.text = ""
+        self.confirmPasswordTextField.text = ""
+        
+    }
+    
 }

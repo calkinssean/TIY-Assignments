@@ -100,6 +100,13 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         performSegueWithIdentifier("editProfileSegue", sender: self)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editProfileSegue" {
+            let controller = segue.destinationViewController as! EditProfileViewController
+            controller.currentUser = self.currentUser
+        }
+    }
+    
     @IBAction func searchByNameTapped(sender: BorderButton) {
         performSegueWithIdentifier("searchByNameSegue", sender: self)
     }
@@ -108,5 +115,6 @@ class NotesTableViewController: UIViewController, UITableViewDataSource, UITable
         performSegueWithIdentifier("searchByDateSegue", sender: self)
     }
     
+    @IBAction func unwindSegue (segue: UIStoryboardSegue) {}
     
 }

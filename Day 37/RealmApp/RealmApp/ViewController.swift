@@ -31,13 +31,13 @@ class ViewController: UIViewController {
     
     @IBAction func loginTapped(sender: UIButton) {
         
-        let searchedUsers = realm.objects(User)
+        let searchedUsers = realm.objects(User).filter("username == '\(usernameTextField.text!)'")
         
         var correctLogin = false
         
         for user in searchedUsers {
             
-            if user.username == usernameTextField.text! && user.password == passwordTextField.text! {
+            if user.password == passwordTextField.text! {
              
                 correctLogin = true
                 self.currentUser = user
@@ -80,6 +80,6 @@ class ViewController: UIViewController {
         self.passwordTextField.text = ""
         
     }
-        
+    
 }
 
