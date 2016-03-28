@@ -25,6 +25,8 @@ class Event {
     
     var hasSeededTimeSlots: Bool = false
     
+    var ref: Firebase?
+    
     var eventRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/events")
     
     init (){}

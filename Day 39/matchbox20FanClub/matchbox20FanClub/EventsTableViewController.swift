@@ -27,7 +27,7 @@ class EventsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Events"
         observeEvents()
-        formatter.dateFormat = "MMM/dd/yyyy KK:mm"
+        formatter.dateFormat = "MMM/dd/yyyy hh:mm"
         
         if revealViewController() != nil {
             //            revealViewController().rearViewRevealWidth = 62
@@ -165,7 +165,7 @@ class EventsTableViewController: UITableViewController {
                         let key = snap.key
                         print(key)
                         let event = Event(key: key, dict: dict)
-                        
+                        event.ref = Firebase(url: "https://matchbox20fanclub.firebaseio.com/events/\(key)")
                         // Add the event to our eventsArray
                         self.arrayOfEvents.insert(event, atIndex: 0)
                         print(self.arrayOfEvents.count)
@@ -193,17 +193,19 @@ class EventsTableViewController: UITableViewController {
     }
     */
     
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        if editingStyle == .Delete {
+            
+            let event = arrayOfEvents[indexPath.row]
+            event.ref?.removeValue()
+            
+        } else if editingStyle == .Insert {
+            
+        }
     }
-    }
-    */
+    
     
     /*
     // Override to support rearranging the table view.

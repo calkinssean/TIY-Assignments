@@ -27,7 +27,7 @@ class TimeSlotsTableViewController: UITableViewController {
         timeInterval = currentEvent.startDate.timeIntervalSince1970
         currentEventRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/events/\(currentEvent.key)")
         
-        formatter.dateFormat = "MMM/dd/yyyy KK:mm"
+        formatter.dateFormat = "MMM/dd/yyyy hh:mm"
         
         self.seedTimeSlots()
         
