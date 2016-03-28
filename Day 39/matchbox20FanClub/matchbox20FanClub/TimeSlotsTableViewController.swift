@@ -7,85 +7,134 @@
 //
 
 import UIKit
+import Firebase
 
 class TimeSlotsTableViewController: UITableViewController {
-
+    
+    var formatter = NSDateFormatter()
+    var timeInterval: NSTimeInterval = 0
+    var currentEvent = Event()
+    var arrayOfTimeSlots = [TimeSlot]()
+    var currentEventRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/events/")
+    var timeSlotRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/timeslot/")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        observeTimeSlots()
+        print(currentEvent.hasSeededTimeSlots)
+        self.title = "\(currentEvent.name)"
+        timeInterval = currentEvent.startDate.timeIntervalSince1970
+        currentEventRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/events/\(currentEvent.key)")
+        
+        formatter.dateFormat = "MMM/dd/yyyy KK:mm"
+        
+        self.seedTimeSlots()
         
         
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let timeSlot = arrayOfTimeSlots[indexPath.row]
+        
+        timeSlot.ref?.updateChildValues([
+             "taken": !timeSlot.taken
+            ])
+        
     }
-
+    
+    // MARK: - Table view data source
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayOfTimeSlots.count
     }
-
-    /*
+    
+    // MARK: - Setting up cell
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("SlotCell", forIndexPath: indexPath) as! SlotTableViewCell
+        let t = arrayOfTimeSlots[indexPath.row]
+        cell.slotNameLabel.text = t.name
+        if !t.taken {
+            cell.accessoryType = UITableViewCellAccessoryType.None
+            cell.backgroundColor = UIColor.greenColor()
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            cell.backgroundColor = UIColor.redColor()
+            cell.textLabel?.backgroundColor = UIColor.redColor()
+        }
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func seedTimeSlots() {
+        
+        if self.currentEvent.hasSeededTimeSlots == false {
+            
+            if timeInterval < currentEvent.endDate.timeIntervalSince1970 {
+                
+                let time = NSDate(timeIntervalSince1970: timeInterval)
+                let date = formatter.stringFromDate(time)
+                print("This is the date: \(date)")
+                timeInterval = timeInterval + 900
+                let slot = TimeSlot()
+                slot.name = date
+                slot.eventKey = self.currentEvent.key
+                slot.saveTimeslot()
+                seedTimeSlots()
+                
+            } else {
+                
+                currentEventRef.updateChildValues(["hasSeededTimeSlots": true])
+            }
+        }
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    func observeTimeSlots() {
+        
+        // Add observer for Events
+        
+        self.timeSlotRef.observeEventType(.Value, withBlock: { snapshot in
+            
+            print(snapshot.value)
+            
+            self.arrayOfTimeSlots.removeAll()
+            
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                
+                for snap in snapshots {
+                    
+                    if let dict = snap.value as? [String: AnyObject] {
+                        
+                        let key = snap.key
+                        
+                        let slot = TimeSlot(key: key, dict: dict)
+                        
+                        if slot.eventKey == self.currentEvent.key {
+                            
+                            slot.ref = Firebase(url: "https://matchbox20fanclub.firebaseio.com/timeslot/\(key)")
+                            
+                            self.arrayOfTimeSlots.append(slot)
+                            self.tableView.reloadData()
+                        }
+                        
+                    }
+                }
+            }
+        })
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }

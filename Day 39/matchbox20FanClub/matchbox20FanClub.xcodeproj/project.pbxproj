@@ -13,12 +13,13 @@
 		1423C38D1CA5EC8A004C7A51 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423C38C1CA5EC8A004C7A51 /* CalendarViewController.swift */; };
 		1423C38F1CA5EFCB004C7A51 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423C38E1CA5EFCB004C7A51 /* MenuController.swift */; };
 		1423C3911CA5F9B7004C7A51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1423C3901CA5F9B7004C7A51 /* LoginViewController.swift */; };
+		144050E81CA8C2A700906A3E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144050E71CA8C2A700906A3E /* CustomTableViewCell.swift */; };
+		14672D641CA9125800CE64C3 /* SlotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14672D631CA9125800CE64C3 /* SlotTableViewCell.swift */; };
 		14F403851CA4955800B6C579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F403841CA4955800B6C579 /* AppDelegate.swift */; };
 		14F403871CA4955800B6C579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F403861CA4955800B6C579 /* ViewController.swift */; };
 		14F4038A1CA4955800B6C579 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F403881CA4955800B6C579 /* Main.storyboard */; };
 		14F4038C1CA4955800B6C579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F4038B1CA4955800B6C579 /* Assets.xcassets */; };
 		14F4038F1CA4955800B6C579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F4038D1CA4955800B6C579 /* LaunchScreen.storyboard */; };
-		14F403971CA4980000B6C579 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F403961CA4980000B6C579 /* User.swift */; };
 		14F403991CA4980C00B6C579 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F403981CA4980C00B6C579 /* Event.swift */; };
 		14F4039D1CA4983E00B6C579 /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F4039C1CA4983E00B6C579 /* TimeSlot.swift */; };
 		568D4E4EAAD4A2E28344AB2B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1440C734C12D125207173AAD /* Pods.framework */; };
@@ -33,7 +34,9 @@
 		1423C38C1CA5EC8A004C7A51 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		1423C38E1CA5EFCB004C7A51 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		1423C3901CA5F9B7004C7A51 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		144050E71CA8C2A700906A3E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		1440C734C12D125207173AAD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14672D631CA9125800CE64C3 /* SlotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotTableViewCell.swift; sourceTree = "<group>"; };
 		14F403811CA4955800B6C579 /* matchbox20FanClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = matchbox20FanClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F403841CA4955800B6C579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F403861CA4955800B6C579 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		14F4038B1CA4955800B6C579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14F4038E1CA4955800B6C579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14F403901CA4955800B6C579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14F403961CA4980000B6C579 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		14F403981CA4980C00B6C579 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		14F4039C1CA4983E00B6C579 /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
 		4118C3D9AA618084022333A4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,7 +97,6 @@
 		1423C3951CA5FA77004C7A51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				14F403961CA4980000B6C579 /* User.swift */,
 				14F403981CA4980C00B6C579 /* Event.swift */,
 				14F4039C1CA4983E00B6C579 /* TimeSlot.swift */,
 			);
@@ -112,6 +113,15 @@
 				14F403901CA4955800B6C579 /* Info.plist */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		144050E91CA8C2AC00906A3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				144050E71CA8C2A700906A3E /* CustomTableViewCell.swift */,
+				14672D631CA9125800CE64C3 /* SlotTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		14F403781CA4955800B6C579 = {
@@ -137,6 +147,7 @@
 			children = (
 				14F403861CA4955800B6C579 /* ViewController.swift */,
 				1423C3951CA5FA77004C7A51 /* Models */,
+				144050E91CA8C2AC00906A3E /* Views */,
 				1423C3941CA5FA5B004C7A51 /* View Controllers */,
 				1423C3961CA5FA98004C7A51 /* Support Files */,
 			);
@@ -276,15 +287,16 @@
 			files = (
 				1423C38F1CA5EFCB004C7A51 /* MenuController.swift in Sources */,
 				1423C38B1CA5EB38004C7A51 /* TimeSlotsTableViewController.swift in Sources */,
+				144050E81CA8C2A700906A3E /* CustomTableViewCell.swift in Sources */,
 				14F403991CA4980C00B6C579 /* Event.swift in Sources */,
 				1423C3891CA5EB26004C7A51 /* EventsTableViewController.swift in Sources */,
 				14F403871CA4955800B6C579 /* ViewController.swift in Sources */,
 				14F4039D1CA4983E00B6C579 /* TimeSlot.swift in Sources */,
 				14F403851CA4955800B6C579 /* AppDelegate.swift in Sources */,
 				1423C38D1CA5EC8A004C7A51 /* CalendarViewController.swift in Sources */,
-				14F403971CA4980000B6C579 /* User.swift in Sources */,
 				1423C3841CA5C662004C7A51 /* SWRevealViewController.m in Sources */,
 				1423C3911CA5F9B7004C7A51 /* LoginViewController.swift in Sources */,
+				14672D641CA9125800CE64C3 /* SlotTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

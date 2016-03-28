@@ -12,6 +12,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    var authId = ""
+    
     let LoggedIn = "LoggedIn"
     // MARK: Outlets
     @IBOutlet weak var textFieldLoginEmail: UITextField!
@@ -23,20 +25,23 @@ class LoginViewController: UIViewController {
     // MARK: UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref.observeAuthEventWithBlock { (authData) -> Void in
+            if authData != nil {
+                print(authData)
+                
+                self.authId = authData.uid
+                
+                self.performSegueWithIdentifier(self.LoggedIn, sender: self)
+                
+                
+
+            }
+        }
         
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        ref.unauth()
-        ref.observeAuthEventWithBlock { (authData) -> Void in
-            if authData != nil {
-                print(authData)
-                self.performSegueWithIdentifier(self.LoggedIn, sender: self)
-                
-                
-            }
-        }
         
     }
     
@@ -101,6 +106,13 @@ class LoginViewController: UIViewController {
         presentViewController(alert,
             animated: true,
             completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "\(self.LoggedIn)" {
+           // let controller = segue.destinationViewController as! SWRevealViewController
+           // controller.authId = self.authId
+        }
     }
     
 }

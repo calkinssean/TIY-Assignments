@@ -23,22 +23,22 @@ class Event {
     
     var endDate = NSDate()
     
+    var hasSeededTimeSlots: Bool = false
     
     var eventRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/events")
     
-    init () {
-        
-    }
+    init (){}
     
     
     init(key: String, dict: [String: AnyObject]) {
+        
+        self.key = key
         
         if let name = dict["name"] as? String {
             
             self.name = name
             
         } else {
-            
             print("couldnt parse name")
         }
         
@@ -47,7 +47,6 @@ class Event {
             self.genre = genre
             
         } else {
-            
             print("Couldnt print genre")
         }
         
@@ -56,7 +55,6 @@ class Event {
             self.startDate = NSDate(timeIntervalSince1970: startDate)
             
         } else {
-            
             print("coudlnt parse startDate")
         }
         
@@ -65,13 +63,21 @@ class Event {
             self.endDate = NSDate(timeIntervalSince1970: endDate)
             
         } else {
+            print("cant parse endDate")
+        }
+        
+        if let hasSeededTimeSlots = dict["hasSeededTimeSlots"] as? Bool {
             
-            print(" cant parse endDate")
+            self.hasSeededTimeSlots = hasSeededTimeSlots
+            
+        } else {
+            print("Couldn't parse hasSeededTimeSlots")
         }
     }
     
     func save() {
         
+        print("save called")
         
         let startDateInt = self.startDate.timeIntervalSince1970
         let endDateInt = self.endDate.timeIntervalSince1970
@@ -82,10 +88,9 @@ class Event {
             "genre": self.genre,
             "startDate": startDateInt,
             "endDate": endDateInt,
-            "userKey": self.userKey
+            "hasSeededTimeSlots": self.hasSeededTimeSlots
 
         ]
-        
         
         let firebaseQuestion = self.eventRef.childByAutoId()
         firebaseQuestion.setValue(dict)

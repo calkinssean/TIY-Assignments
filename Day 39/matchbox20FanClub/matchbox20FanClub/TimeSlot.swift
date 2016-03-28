@@ -13,20 +13,26 @@ class TimeSlot {
     
     var key: String = ""
     var userKey: String = ""
+    var eventKey: String = ""
     var name: String = ""
     var startDate = NSDate()
     var endDate = NSDate()
-    var user: User?
+    var ref: Firebase?
+    var taken: Bool = false
     
     var eventRef = Firebase(url: "https://matchbox20fanclub.firebaseio.com/timeslot")
     
     init() {
+        
     }
     
     init(key: String, dict: [String: AnyObject]) {
         
         self.key = key
         
+        if let eventKey = dict["eventKey"] as? String {
+            self.eventKey = eventKey
+        }
         if let name = dict["name"] as? String {
             self.name = name
         }
@@ -36,9 +42,10 @@ class TimeSlot {
         if let endDateInterval = dict["endDate"] as? NSTimeInterval {
             self.endDate = NSDate(timeIntervalSince1970: endDateInterval)
         }
-        if let user = dict["user"] as? User {
-            self.user = user
+        if let taken = dict["taken"] as? Bool {
+            self.taken = taken
         }
+
     }
     
     func saveTimeslot() {
@@ -51,7 +58,9 @@ class TimeSlot {
             "name": self.name,
             "startDate": startDateInterval,
             "endDate": endDateInterval,
-            "userKey": self.userKey
+            "userKey": self.userKey,
+            "taken": self.taken,
+            "eventKey": self.eventKey
             
         ]
         

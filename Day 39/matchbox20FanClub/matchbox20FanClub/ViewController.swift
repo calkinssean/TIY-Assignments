@@ -11,7 +11,7 @@ import Firebase
 
 class ViewController: UIViewController {
 
-    var usersArray = [User]()
+   // var usersArray = [User]()
     
     var eventsArray = [Event]()
     
@@ -48,20 +48,20 @@ class ViewController: UIViewController {
         
     }
 
-    func seedUser() {
-        
-        let u = User()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "MMM/dd/yyyy"
-        if let created = formatter.dateFromString("Dec/21/1969") {
-            u.created = created
-        }
-        
-        u.email = "coolguy@email.com"
-        u.password = "coolGuyPassword"
-        u.save()
-       
-    }
+//    func seedUser() {
+//        
+//        let u = User()
+//        let formatter = NSDateFormatter()
+//        formatter.dateFormat = "MMM/dd/yyyy"
+//        if let created = formatter.dateFromString("Dec/21/1969") {
+//            u.created = created
+//        }
+//        
+//        u.email = "coolguy@email.com"
+//        u.password = "coolGuyPassword"
+//        u.save()
+//       
+//    }
     
     func seedEvent() {
         
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
             
             print(snapshot.value)
             
-            self.usersArray.removeAll()
+           // self.usersArray.removeAll()
             
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
                 
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
             
             print(snapshot.value)
             
-            self.usersArray.removeAll()
+            //self.usersArray.removeAll()
             
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
                 
@@ -127,12 +127,12 @@ class ViewController: UIViewController {
                         
                         let key = snap.key
                         
-                        let user = User(key: key, dict: dict)
+                        //let user = User(key: key, dict: dict)
                         
                         // Add the event to our eventsArray
                         
-                        self.usersArray.insert(user, atIndex: 0)
-                        print(self.usersArray.count)
+                        //self.usersArray.insert(user, atIndex: 0)
+                       // print(self.usersArray.count)
                     }
                 }
             }
